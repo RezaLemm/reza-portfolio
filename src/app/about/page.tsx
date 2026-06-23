@@ -7,12 +7,12 @@ export default function AboutPage() {
         </p>
 
         <h1 className="mt-4 text-5xl font-semibold tracking-[-0.04em] text-[#f2f2f2] md:text-7xl">
-          Visual design by Reza Mousazadeh Moghddam.
+          Visual design by Reza Mousazadeh.
         </h1>
 
         <p className="mt-8 text-lg leading-8 text-[#a8a8a8]">
-          LEMM Studio is the personal visual portfolio of Reza Mousazadeh
-          Moghddam, a graphic designer and computer engineering student based in
+          LEMM Studio is the personal visual portfolio of Reza Mousazadeh,
+          a graphic designer and computer engineering student based in
           Mashhad, Iran. The portfolio focuses on graphic design, brand identity,
           thumbnails, banners, advertising visuals, AI-assisted artworks, and
           premium presentation design.

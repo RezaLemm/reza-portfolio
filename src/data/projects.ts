@@ -7,7 +7,6 @@ export type Project = {
   category: string;
   type: ProjectType;
   description: string;
-  cover: string;
   tools: string[];
   featured: boolean;
 };
@@ -34,8 +33,8 @@ export const projects: Project[] = [
     slug: "real-roastery",
     category: "Brand Identity",
     type: "case-study",
-    description: "Premium coffee brand identity and visual presentation system.",
-    cover: "/works/real-roastery-cover.jpg",
+    description:
+      "A premium coffee brand identity system focused on warmth, craft, and refined simplicity.",
     tools: ["Photoshop", "Illustrator", "InDesign"],
     featured: true,
   },
@@ -45,8 +44,8 @@ export const projects: Project[] = [
     slug: "gazak",
     category: "Packaging",
     type: "case-study",
-    description: "Food brand identity and packaging design system.",
-    cover: "/works/gazak-cover.jpg",
+    description:
+      "Food brand identity and packaging system with a bold, warm, and appetizing visual language.",
     tools: ["Photoshop", "Illustrator", "InDesign"],
     featured: true,
   },
@@ -56,20 +55,42 @@ export const projects: Project[] = [
     slug: "khane-irani",
     category: "Brand Identity",
     type: "case-study",
-    description: "Iranian restaurant visual identity and menu design.",
-    cover: "/works/khane-irani-cover.jpg",
+    description:
+      "Iranian restaurant visual identity inspired by heritage, warmth, elegance, and Persian atmosphere.",
     tools: ["Photoshop", "Illustrator", "InDesign"],
     featured: true,
   },
   {
     id: 4,
-    title: "YouTube Thumbnail Design",
-    slug: "youtube-thumbnail-design",
+    title: "Thumbnail Design Series",
+    slug: "thumbnail-design-series",
     category: "Thumbnail",
     type: "quick-work",
-    description: "High-impact thumbnail design for digital content.",
-    cover: "/works/thumbnail-01.jpg",
+    description:
+      "High-impact thumbnail concepts designed for digital content, contrast, and fast visual attention.",
     tools: ["Photoshop"],
+    featured: false,
+  },
+  {
+    id: 5,
+    title: "AI Visual Experiments",
+    slug: "ai-visual-experiments",
+    category: "AI Visuals",
+    type: "quick-work",
+    description:
+      "A collection of AI-assisted visual studies focused on mood, composition, atmosphere, and concept art.",
+    tools: ["AI Tools", "Photoshop"],
+    featured: false,
+  },
+  {
+    id: 6,
+    title: "Advertising Banner Concepts",
+    slug: "advertising-banner-concepts",
+    category: "Banner",
+    type: "quick-work",
+    description:
+      "Digital banner design concepts for promotional campaigns, social media, and online advertising.",
+    tools: ["Photoshop", "Illustrator"],
     featured: false,
   },
 ];
