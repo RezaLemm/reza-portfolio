@@ -24,10 +24,10 @@ export default function Navbar() {
 
   return (
     <motion.header
-      initial={{ y: -24, opacity: 0 }}
+      initial={{ y: -16, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, ease: smoothEase }}
-      className="fixed left-0 top-0 z-50 w-full border-b border-[#2a2a2a]/70 bg-[#090909]/75 backdrop-blur-2xl"
+      transition={{ duration: 0.45, ease: smoothEase }}
+      className="fixed left-0 top-0 z-50 w-full border-b border-[#2a2a2a]/70 bg-[#090909]/72 backdrop-blur-2xl"
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-6 md:py-5">
         <Link
@@ -35,13 +35,9 @@ export default function Navbar() {
           className="group flex items-center gap-3"
           onClick={() => setIsOpen(false)}
         >
-          <motion.span
-            whileHover={{ scale: 1.08, rotate: -2 }}
-            transition={{ type: "spring", stiffness: 260, damping: 18 }}
-            className="font-brand text-2xl font-semibold tracking-[-0.06em] text-[#c9a46a]"
-          >
+          <span className="font-brand text-2xl font-semibold tracking-[-0.06em] text-[#c9a46a] transition group-hover:scale-105">
             {t.brand.mark}
-          </motion.span>
+          </span>
 
           <span className="font-brand hidden text-sm font-semibold uppercase tracking-[0.24em] text-[#f2f2f2] transition group-hover:text-[#c9a46a] sm:block">
             {t.brand.name}
@@ -49,25 +45,15 @@ export default function Navbar() {
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">
-          {navItems.map((item, index) => (
-            <motion.div
+          {navItems.map((item) => (
+            <Link
               key={item.href}
-              initial={{ y: -8, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{
-                delay: 0.18 + index * 0.07,
-                duration: 0.55,
-                ease: smoothEase,
-              }}
+              href={item.href}
+              className="group relative text-sm font-medium text-[#a8a8a8] transition hover:text-[#f2f2f2]"
             >
-              <Link
-                href={item.href}
-                className="group relative text-sm font-medium text-[#a8a8a8] transition hover:text-[#f2f2f2]"
-              >
-                {item.label}
-                <span className="absolute -bottom-2 left-0 h-px w-0 bg-[#c9a46a] transition-all duration-300 group-hover:w-full" />
-              </Link>
-            </motion.div>
+              {item.label}
+              <span className="absolute -bottom-2 left-0 h-px w-0 bg-[#c9a46a] transition-all duration-300 group-hover:w-full" />
+            </Link>
           ))}
 
           <LanguageToggle />
@@ -92,35 +78,23 @@ export default function Navbar() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.45, ease: smoothEase }}
-            className="overflow-hidden border-t border-[#2a2a2a] bg-[#090909] px-5 md:hidden"
+            transition={{ duration: 0.32, ease: smoothEase }}
+            className="overflow-hidden border-t border-[#2a2a2a] bg-[#090909]/95 px-5 backdrop-blur-2xl md:hidden"
           >
             <div
               className={`mx-auto flex max-w-7xl flex-col gap-4 py-5 ${
                 isFa ? "items-end text-right" : "items-start text-left"
               }`}
             >
-              {navItems.map((item, index) => (
-                <motion.div
+              {navItems.map((item) => (
+                <Link
                   key={item.href}
-                  initial={{ x: isFa ? 20 : -20, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  exit={{ x: isFa ? 20 : -20, opacity: 0 }}
-                  transition={{
-                    delay: index * 0.06,
-                    duration: 0.4,
-                    ease: smoothEase,
-                  }}
-                  className="w-full"
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className="block w-full rounded-xl border border-[#2a2a2a] px-4 py-4 text-sm font-semibold text-[#f2f2f2] transition hover:border-[#c9a46a] hover:text-[#c9a46a]"
                 >
-                  <Link
-                    href={item.href}
-                    onClick={() => setIsOpen(false)}
-                    className="block w-full rounded-xl border border-[#2a2a2a] px-4 py-4 text-sm font-semibold text-[#f2f2f2] transition hover:border-[#c9a46a] hover:text-[#c9a46a]"
-                  >
-                    {item.label}
-                  </Link>
-                </motion.div>
+                  {item.label}
+                </Link>
               ))}
             </div>
           </motion.div>

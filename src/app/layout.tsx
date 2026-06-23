@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import InteractiveBackground from "@/components/InteractiveBackground";
+import MotionConfigProvider from "@/components/MotionConfigProvider";
 import { LanguageProvider } from "@/components/LanguageProvider";
 
 const inter = localFont({
@@ -100,8 +102,14 @@ export default function RootLayout({
     <html lang="en" data-scroll-behavior="smooth">
       <body className={`${inter.variable} ${peyda.variable} ${rokh.variable}`}>
         <LanguageProvider>
-          <Navbar />
-          {children}
+          <MotionConfigProvider>
+            <InteractiveBackground />
+
+            <div className="relative z-10">
+              <Navbar />
+              {children}
+            </div>
+          </MotionConfigProvider>
         </LanguageProvider>
       </body>
     </html>
