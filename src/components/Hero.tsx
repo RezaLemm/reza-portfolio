@@ -7,17 +7,19 @@ export default function Hero() {
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 lg:grid-cols-2">
         <div className="flex flex-col justify-center">
           <p className="mb-6 text-xs font-semibold uppercase tracking-[0.35em] text-[#c9a46a]">
-            Designing meaning. Visualizing ideas.
+           Graphic Design & Visual Portfolio
           </p>
 
           <h1 className="max-w-4xl text-5xl font-semibold leading-[0.95] tracking-[-0.04em] text-[#f2f2f2] md:text-7xl lg:text-8xl">
-            Graphic Designer & Visual Creator
+            LEMM Studio
+            <br />
+            Visual Portfolio
           </h1>
 
           <p className="mt-8 max-w-xl text-base leading-7 text-[#a8a8a8] md:text-lg">
-            I design visual identities, thumbnails, banners, advertising visuals,
-            and digital graphics with a focus on atmosphere, clarity, and premium
-            presentation.
+            A visual design portfolio by Reza Mousazadeh Moghddam, focused on brand
+            identity, thumbnails, banners, advertising visuals, AI-assisted artworks,
+            and premium presentation design.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
@@ -43,13 +45,13 @@ export default function Hero() {
           <div className="flex h-full items-center justify-center rounded-xl border border-[#2a2a2a] bg-[#0f0f0f] text-center">
             <div>
               <p className="text-sm uppercase tracking-[0.35em] text-[#c9a46a]">
-                Featured Visual
+                LEMM Studio
               </p>
               <h2 className="mt-4 text-3xl font-semibold text-[#f2f2f2]">
-                Portfolio Cover
+                Selected Visual Works
               </h2>
               <p className="mt-3 text-sm text-[#a8a8a8]">
-                Add your artwork image later.
+                Brand identity, banners, thumbnails, AI visuals, and creative design studies.
               </p>
             </div>
           </div>

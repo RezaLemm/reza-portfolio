@@ -3,9 +3,9 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  title: "Reza Mousazadeh Moghddam | Graphic Designer",
+  title: "LEMM Studio | Graphic Design & Visual Portfolio",
   description:
-    "Portfolio of Reza Mousazadeh Moghddam, graphic designer and visual creator.",
+    "LEMM Studio is the graphic design and visual portfolio of Reza Mousazadeh Moghddam, focused on brand identity, thumbnails, banners, advertising visuals, AI-assisted artworks, and premium presentation design.",
 };
 
 export default function RootLayout({

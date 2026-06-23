@@ -7,12 +7,12 @@ export default function ContactPage() {
         </p>
 
         <h1 className="mt-4 text-5xl font-semibold tracking-[-0.04em] text-[#f2f2f2] md:text-7xl">
-          Let’s work together.
+          Let’s create something visual.
         </h1>
 
         <p className="mt-8 text-lg leading-8 text-[#a8a8a8]">
-          For design projects, collaborations, or portfolio inquiries, contact me
-          by email.
+          For design projects, collaborations, portfolio inquiries, or visual
+          content requests, contact LEMM Studio by email.
         </p>
 
         <a
