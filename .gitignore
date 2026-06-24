@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.env*.local
+
+# local recovery/backups
+*_backup*
+*.backup*
+*.broken-now
+_recovery-before-git-restore-*/
+_latest-home-recovery-*/
+.tmp/
+
