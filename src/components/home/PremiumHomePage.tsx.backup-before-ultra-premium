@@ -1,0 +1,333 @@
+"use client"
+
+import Link from "next/link"
+import {motion, useReducedMotion} from "framer-motion"
+import {
+  ArrowUpRight,
+  Aperture,
+  Crown,
+  Image as ImageIcon,
+  Layers3,
+  Palette,
+  Sparkles,
+  Wand2,
+} from "lucide-react"
+import {useEffect, useMemo, useState} from "react"
+
+type Lang = "fa" | "en"
+
+const easePremium = [0.16, 1, 0.3, 1] as const
+
+const copy = {
+  fa: {
+    eyebrow: "پورتفولیوی طراحی گرافیک و آثار بصری",
+    titleTop: "LEMM Studio",
+    titleMain: "استودیوی طراحی",
+    titleLast: "بصری",
+    description:
+      "پورتفولیوی طراحی بصری رضا موسی‌زاده، با تمرکز بر هویت بصری، بنر، تامبنیل، تصاویر تبلیغاتی، آرت‌ورک‌های AI و طراحی ارائه‌های حرفه‌ای.",
+    primary: "مشاهده کانواس",
+    secondary: "تماس",
+    chips: ["برندینگ", "آثار دیجیتال", "آرت‌ورک AI"],
+    cardLabel: "LEMM Studio",
+    cardTitle: "آثار منتخب بصری",
+    cardText: "هویت بصری، بنر، تامبنیل، تصاویر هوش مصنوعی و تجربه‌های خلاقانه طراحی.",
+    metrics: [
+      ["+30", "پروژه بصری"],
+      ["4", "حوزه طراحی"],
+      ["AI", "کمک‌طراحی هوشمند"],
+    ],
+    sections: [
+      {
+        title: "هویت بصری",
+        text: "ساخت زبان تصویری منسجم برای برند، محصول و فضای دیجیتال.",
+      },
+      {
+        title: "طراحی تبلیغاتی",
+        text: "بنر، تامبنیل و کمپین‌های بصری با تمرکز بر وضوح و اثرگذاری.",
+      },
+      {
+        title: "آثار AI و مفهومی",
+        text: "ترکیب طراحی دستی، ایده‌پردازی و هوش مصنوعی برای خروجی‌های خاص.",
+      },
+    ],
+  },
+  en: {
+    eyebrow: "Graphic Design & Visual Portfolio",
+    titleTop: "LEMM Studio",
+    titleMain: "Visual",
+    titleLast: "Portfolio",
+    description:
+      "A visual design portfolio by Reza Mousazadeh, focused on brand identity, thumbnails, banners, advertising visuals, AI-assisted artworks, and premium presentation design.",
+    primary: "View Canvas",
+    secondary: "Contact",
+    chips: ["Branding", "Digital Visuals", "AI Artworks"],
+    cardLabel: "LEMM Studio",
+    cardTitle: "Selected Visual Works",
+    cardText: "Brand identity, banners, thumbnails, AI visuals, and creative design studies.",
+    metrics: [
+      ["+30", "Visual projects"],
+      ["4", "Design areas"],
+      ["AI", "Assisted workflow"],
+    ],
+    sections: [
+      {
+        title: "Brand Identity",
+        text: "Visual systems with a refined, consistent language for brands and products.",
+      },
+      {
+        title: "Campaign Visuals",
+        text: "Banners, thumbnails, and advertising designs with clear visual hierarchy.",
+      },
+      {
+        title: "AI Concept Art",
+        text: "Combining creative direction, manual design taste, and AI-assisted visuals.",
+      },
+    ],
+  },
+} satisfies Record<Lang, any>
+
+function getLang(): Lang {
+  if (typeof document === "undefined") return "en"
+
+  const htmlLang = document.documentElement.getAttribute("lang")?.toLowerCase() || ""
+  const htmlDir = document.documentElement.getAttribute("dir")?.toLowerCase() || ""
+  const bodyDir = document.body?.getAttribute("dir")?.toLowerCase() || ""
+
+  if (htmlLang.startsWith("fa") || htmlDir === "rtl" || bodyDir === "rtl") return "fa"
+  return "en"
+}
+
+export default function PremiumHomePage() {
+  const shouldReduceMotion = useReducedMotion()
+  const [lang, setLang] = useState<Lang>("en")
+
+  useEffect(() => {
+    const updateLang = () => setLang(getLang())
+    updateLang()
+
+    const observer = new MutationObserver(updateLang)
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["lang", "dir"],
+    })
+
+    if (document.body) {
+      observer.observe(document.body, {
+        attributes: true,
+        attributeFilter: ["dir", "lang"],
+      })
+    }
+
+    return () => observer.disconnect()
+  }, [])
+
+  const isFa = lang === "fa"
+  const t = copy[lang]
+
+  const dust = useMemo(
+    () =>
+      Array.from({length: 42}, (_, index) => ({
+        id: index,
+        left: `${3 + ((index * 31) % 94)}%`,
+        top: `${7 + ((index * 47) % 84)}%`,
+        delay: (index % 9) * 0.08,
+        size: index % 7 === 0 ? 2.2 : index % 3 === 0 ? 1.6 : 1.05,
+        opacity: index % 5 === 0 ? 0.42 : 0.2,
+      })),
+    []
+  )
+
+  return (
+    <main
+      dir={isFa ? "rtl" : "ltr"}
+      className="relative isolate min-h-screen overflow-hidden bg-[#030303] text-white"
+    >
+      <div className="pointer-events-none absolute inset-0 -z-20 bg-[radial-gradient(circle_at_48%_18%,rgba(255,230,188,0.12),transparent_30%),radial-gradient(circle_at_16%_18%,rgba(194,133,62,0.16),transparent_34%),radial-gradient(circle_at_82%_70%,rgba(118,70,31,0.14),transparent_34%),linear-gradient(180deg,#050505_0%,#080706_48%,#030303_100%)]" />
+
+      <div className="pointer-events-none absolute inset-0 -z-10 opacity-[0.055] [background-image:linear-gradient(rgba(255,255,255,0.7)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.7)_1px,transparent_1px)] [background-size:120px_120px]" />
+
+      <div className="pointer-events-none absolute left-1/2 top-[42%] -z-10 h-[78vmin] w-[78vmin] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#d7b06a]/10" />
+      <div className="pointer-events-none absolute left-1/2 top-[42%] -z-10 h-[58vmin] w-[58vmin] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#d7b06a]/10" />
+      <div className="pointer-events-none absolute left-1/2 top-[42%] -z-10 h-[38vmin] w-[38vmin] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#d7b06a]/10" />
+
+      {!shouldReduceMotion &&
+        dust.map((item) => (
+          <motion.span
+            key={item.id}
+            className="pointer-events-none absolute z-0 rounded-full bg-[#f3d59a]"
+            style={{
+              left: item.left,
+              top: item.top,
+              width: item.size,
+              height: item.size,
+              boxShadow: "0 0 18px rgba(215,176,106,0.38)",
+            }}
+            initial={{opacity: 0, scale: 0.8}}
+            animate={{opacity: [0, item.opacity, 0], scale: [0.8, 1.15, 0.8], y: [-3, 6, -3]}}
+            transition={{
+              duration: 4.2,
+              delay: item.delay,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
+
+      <section className="relative mx-auto grid min-h-screen w-full max-w-[1180px] grid-cols-1 items-center gap-14 px-6 pb-24 pt-28 md:grid-cols-[1.02fr_0.98fr] md:px-8 lg:gap-20">
+        <motion.div
+          className={isFa ? "text-center md:text-right" : "text-center md:text-left"}
+          initial={{opacity: 0, y: 24}}
+          animate={{opacity: 1, y: 0}}
+          transition={{duration: 0.75, ease: easePremium}}
+        >
+          <motion.div
+            className="mb-7 inline-flex items-center gap-3 rounded-full border border-[#d7b06a]/20 bg-white/[0.035] px-4 py-2 text-[11px] font-bold uppercase tracking-[0.28em] text-[#d7b06a] shadow-[0_22px_90px_rgba(0,0,0,0.42)] backdrop-blur-xl"
+            initial={{opacity: 0, y: 12}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 0.55, delay: 0.12, ease: easePremium}}
+          >
+            <Sparkles size={14} />
+            <span>{t.eyebrow}</span>
+          </motion.div>
+
+          <div className="relative">
+            <h1 className="max-w-[740px] text-[clamp(3.7rem,8vw,7.75rem)] font-semibold leading-[0.88] tracking-[-0.075em] text-white md:max-w-none">
+              <span className="block">{t.titleTop}</span>
+              <span className="mt-4 block text-white/95">{t.titleMain}</span>
+              <span className="block bg-gradient-to-b from-white via-white to-white/62 bg-clip-text text-transparent">
+                {t.titleLast}
+              </span>
+            </h1>
+
+            <motion.div
+              className={isFa ? "absolute -right-8 top-1/2 hidden h-28 w-1 bg-gradient-to-b from-transparent via-[#d7b06a] to-transparent md:block" : "absolute -left-8 top-1/2 hidden h-28 w-1 bg-gradient-to-b from-transparent via-[#d7b06a] to-transparent md:block"}
+              initial={{scaleY: 0, opacity: 0}}
+              animate={{scaleY: 1, opacity: 1}}
+              transition={{duration: 0.65, delay: 0.38, ease: easePremium}}
+            />
+          </div>
+
+          <p className="mt-8 max-w-[610px] text-base leading-8 text-white/58 md:text-lg">
+            {t.description}
+          </p>
+
+          <div className="mt-9 flex flex-wrap items-center justify-center gap-4 md:justify-start">
+            <Link
+              href="/work"
+              className="group inline-flex h-14 items-center gap-3 border border-[#d7b06a] bg-[#d7b06a] px-7 text-sm font-bold text-black transition duration-300 hover:bg-[#f1cf8b]"
+            >
+              <span>{t.primary}</span>
+              <ArrowUpRight size={17} className="transition duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </Link>
+
+            <Link
+              href="/contact"
+              className="group inline-flex h-14 items-center gap-3 border border-white/12 bg-white/[0.02] px-7 text-sm font-bold text-white transition duration-300 hover:border-[#d7b06a]/50 hover:bg-white/[0.055]"
+            >
+              <span>{t.secondary}</span>
+              <ArrowUpRight size={17} className="transition duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </Link>
+          </div>
+
+          <div className="mt-10 grid max-w-[620px] grid-cols-3 gap-3">
+            {t.chips.map((chip: string, index: number) => (
+              <motion.div
+                key={chip}
+                className="rounded-2xl border border-white/10 bg-white/[0.025] px-4 py-4 text-center text-xs font-semibold text-white/70 backdrop-blur-xl"
+                initial={{opacity: 0, y: 10}}
+                animate={{opacity: 1, y: 0}}
+                transition={{duration: 0.45, delay: 0.4 + index * 0.06, ease: easePremium}}
+              >
+                {chip}
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="relative mx-auto w-full max-w-[590px]"
+          initial={{opacity: 0, y: 30, scale: 0.985}}
+          animate={{opacity: 1, y: 0, scale: 1}}
+          transition={{duration: 0.8, delay: 0.18, ease: easePremium}}
+        >
+          <div className="absolute -inset-10 rounded-[48px] bg-[radial-gradient(circle_at_50%_45%,rgba(255,235,200,0.12),transparent_56%)] blur-2xl" />
+
+          <div className="relative overflow-hidden rounded-[34px] border border-white/10 bg-white/[0.055] p-4 shadow-[0_44px_140px_rgba(0,0,0,0.62)] backdrop-blur-2xl">
+            <div className="relative overflow-hidden rounded-[24px] border border-white/10 bg-[#10100f] px-7 py-20">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_36%,rgba(215,176,106,0.18),transparent_34%),linear-gradient(135deg,rgba(255,255,255,0.055),transparent_34%,rgba(255,255,255,0.035))]" />
+              <div className="absolute left-1/2 top-1/2 h-60 w-60 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#d7b06a]/10" />
+              <div className="absolute left-5 bottom-5 h-14 w-14 rounded-full border border-[#d7b06a]/25" />
+              <div className="absolute right-8 top-8 h-3 w-3 rounded-full bg-[#d7b06a] shadow-[0_0_26px_rgba(215,176,106,0.8)]" />
+
+              <div className="relative z-10 mx-auto max-w-[440px] text-center">
+                <div className="mb-6 text-[11px] font-black uppercase tracking-[0.55em] text-[#d7b06a]">
+                  {t.cardLabel}
+                </div>
+                <h2 className="text-[clamp(2rem,3.5vw,3.4rem)] font-semibold leading-[1.05] tracking-[-0.045em]">
+                  {t.cardTitle}
+                </h2>
+                <p className="mx-auto mt-6 max-w-[360px] text-sm leading-7 text-white/52">
+                  {t.cardText}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <motion.div
+            className="absolute -bottom-7 left-1/2 grid w-[88%] -translate-x-1/2 grid-cols-3 gap-3"
+            initial={{opacity: 0, y: 16}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 0.6, delay: 0.56, ease: easePremium}}
+          >
+            {t.metrics.map(([value, label]: [string, string]) => (
+              <div
+                key={label}
+                className="rounded-2xl border border-white/10 bg-[#090908]/80 px-4 py-4 text-center shadow-[0_24px_70px_rgba(0,0,0,0.45)] backdrop-blur-xl"
+              >
+                <div className="text-xl font-black text-[#d7b06a]">{value}</div>
+                <div className="mt-1 text-[11px] font-medium text-white/48">{label}</div>
+              </div>
+            ))}
+          </motion.div>
+        </motion.div>
+      </section>
+
+      <section className="relative mx-auto grid w-full max-w-[1180px] grid-cols-1 gap-4 px-6 pb-28 md:grid-cols-3 md:px-8">
+        {t.sections.map((item: {title: string; text: string}, index: number) => {
+          const icons = [Palette, ImageIcon, Wand2]
+          const Icon = icons[index] || Layers3
+
+          return (
+            <motion.div
+              key={item.title}
+              className="group relative overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.035] p-7 backdrop-blur-xl transition duration-500 hover:border-[#d7b06a]/35 hover:bg-white/[0.055]"
+              initial={{opacity: 0, y: 22}}
+              whileInView={{opacity: 1, y: 0}}
+              viewport={{once: true, margin: "-120px"}}
+              transition={{duration: 0.55, delay: index * 0.08, ease: easePremium}}
+            >
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(215,176,106,0.12),transparent_34%)] opacity-0 transition duration-500 group-hover:opacity-100" />
+              <div className="relative z-10">
+                <div className="mb-8 flex h-12 w-12 items-center justify-center rounded-2xl border border-[#d7b06a]/20 bg-[#d7b06a]/10 text-[#d7b06a]">
+                  <Icon size={22} />
+                </div>
+                <h3 className="text-2xl font-semibold tracking-[-0.04em] text-white">
+                  {item.title}
+                </h3>
+                <p className="mt-4 text-sm leading-7 text-white/52">
+                  {item.text}
+                </p>
+              </div>
+            </motion.div>
+          )
+        })}
+      </section>
+
+      <div className="pointer-events-none fixed bottom-5 left-5 z-40 flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-black/35 text-xs font-bold text-white/60 backdrop-blur-xl">
+        <Aperture size={15} />
+      </div>
+    </main>
+  )
+}
