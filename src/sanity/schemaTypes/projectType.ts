@@ -204,7 +204,59 @@ export const projectType = defineType({
       type: "number",
       initialValue: 0,
     }),
-  ],
+
+    defineField({
+      name: "portfolioPdf",
+      title: "Portfolio PDF",
+      type: "file",
+      options: {
+        accept: "application/pdf",
+      },
+      description: "Upload the project portfolio PDF here. Then run npm run sync:pdfs to generate PDF pages.",
+    }),
+
+    defineField({
+      name: "pdfPages",
+      title: "Generated PDF Pages",
+      type: "array",
+      of: [
+        {
+          type: "image",
+          options: {
+            hotspot: false,
+          },
+          fields: [
+            defineField({
+              name: "altEn",
+              title: "Alt - English",
+              type: "string",
+            }),
+            defineField({
+              name: "altFa",
+              title: "Alt - Persian",
+              type: "string",
+            }),
+          ],
+        },
+      ],
+      description: "Auto-generated images from Portfolio PDF. Usually filled by the sync script.",
+    }),
+
+    defineField({
+      name: "pdfPagesSourceAssetId",
+      title: "PDF Pages Source Asset ID",
+      type: "string",
+      readOnly: true,
+      hidden: true,
+    }),
+
+    defineField({
+      name: "pdfPagesSyncedAt",
+      title: "PDF Pages Synced At",
+      type: "datetime",
+      readOnly: true,
+      hidden: true,
+    }),  ],
   preview: {
     select: {
       title: "titleEn",
