@@ -50,3 +50,6 @@ _recovery-before-git-restore-*/
 _latest-home-recovery-*/
 .tmp/
 
+
+Photos/
+
