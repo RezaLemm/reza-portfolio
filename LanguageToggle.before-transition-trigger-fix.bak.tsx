@@ -3,27 +3,16 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "@/components/LanguageProvider";
 
-declare global {
-  interface Window {
-    lemmLanguageTransition?: (lang: "fa" | "en") => void;
-  }
-}
-
 export default function LanguageToggle() {
   const { lang, toggleLang, t } = useLanguage();
   const nextLang = lang === "en" ? "fa" : "en";
 
-  const handleClick = () => {
-    window.lemmLanguageTransition?.(nextLang);
-    toggleLang();
-  };
-
   return (
     <motion.button
-      type="button"
       data-language-toggle
       data-target-lang={nextLang}
-      onClick={handleClick}
+      data-next-lang={nextLang}
+      onClick={toggleLang}
       whileHover={{ y: -2 }}
       whileTap={{ scale: 0.97 }}
       transition={{ type: "spring", stiffness: 320, damping: 22 }}

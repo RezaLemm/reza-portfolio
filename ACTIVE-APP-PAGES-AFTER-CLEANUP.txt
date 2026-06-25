@@ -1,0 +1,6 @@
+﻿src\app\about\page.tsx
+src\app\contact\page.tsx
+src\app\page.tsx
+src\app\studio\[[...tool]]\page.tsx
+src\app\work\[slug]\page.tsx
+src\app\work\page.tsx

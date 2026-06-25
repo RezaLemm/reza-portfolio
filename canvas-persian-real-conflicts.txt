@@ -1,0 +1,625 @@
+﻿F:\2TB\Files\Web\reza-portfolio\src\app\about\page.tsx:5: import { useLanguage } from "@/components/LanguageProvider";
+F:\2TB\Files\Web\reza-portfolio\src\app\about\page.tsx:9: const { t, lang } = useLanguage();
+F:\2TB\Files\Web\reza-portfolio\src\app\about\page.tsx:10: const isFa = lang === "fa";
+F:\2TB\Files\Web\reza-portfolio\src\app\contact\page.tsx:6: import { useLanguage } from "@/components/LanguageProvider";
+F:\2TB\Files\Web\reza-portfolio\src\app\contact\page.tsx:10: const { t, lang } = useLanguage();
+F:\2TB\Files\Web\reza-portfolio\src\app\contact\page.tsx:11: const isFa = lang === "fa";
+F:\2TB\Files\Web\reza-portfolio\src\app\src\app\work\layout.tsx:3: import WorkCinematicShell from "@/components/work/WorkCinematicShell"
+F:\2TB\Files\Web\reza-portfolio\src\app\src\app\work\layout.tsx:6: return <WorkCinematicShell>{children}</WorkCinematicShell>
+F:\2TB\Files\Web\reza-portfolio\src\app\src\app\work\page.tsx:7: type WorkCanvasItem = Record<string, unknown>
+F:\2TB\Files\Web\reza-portfolio\src\app\src\app\work\page.tsx:9: const fallbackCategories: WorkCanvasItem[] = [
+F:\2TB\Files\Web\reza-portfolio\src\app\src\app\work\page.tsx:23: const fallbackProjects: WorkCanvasItem[] = [
+F:\2TB\Files\Web\reza-portfolio\src\app\src\app\work\page.tsx:82: safeSanityFetch<WorkCanvasItem[]>(
+F:\2TB\Files\Web\reza-portfolio\src\app\src\app\work\page.tsx:84: () => client.fetch<WorkCanvasItem[]>(projectsQuery, {}, {next: {revalidate: 60}}),
+F:\2TB\Files\Web\reza-portfolio\src\app\src\app\work\page.tsx:87: safeSanityFetch<WorkCanvasItem[]>(
+F:\2TB\Files\Web\reza-portfolio\src\app\src\app\work\page.tsx:89: () => client.fetch<WorkCanvasItem[]>(categoriesQuery, {}, {next: {revalidate: 60}}),
+F:\2TB\Files\Web\reza-portfolio\src\app\src\app\work\page.tsx:1: import SanityWorkClient from "@/components/work/SanityWorkClient"
+F:\2TB\Files\Web\reza-portfolio\src\app\src\app\work\page.tsx:94: return <SanityWorkClient projects={projects} categories={categories} />
+F:\2TB\Files\Web\reza-portfolio\src\app\src\app\work\page.tsx:38: shortDescriptionEn: "Food brand identity and packaging system with a bold, warm, and appetizing visual language.",
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\SanityWorkClient.tsx:155: <h1>Visual archive</h1>
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\SanityWorkClient.tsx:154: <p className="work-eyebrow">Canvas</p>
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\SanityWorkClient.tsx:154: <p className="work-eyebrow">Canvas</p>
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\SanityWorkClient.tsx:279: .work-eyebrow {
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\SanityWorkClient.tsx:153: <div className="work-hero">
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\SanityWorkClient.tsx:273: .work-hero {
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\SanityWorkClient.tsx:288: .work-hero h1 {
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\SanityWorkClient.tsx:601: .work-hero h1 {
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\SanityWorkClient.tsx:157: <p className="work-intro">
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\SanityWorkClient.tsx:305: .work-intro {
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\SanityWorkClient.tsx:7: type SanityWorkClientProps = {
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\SanityWorkClient.tsx:123: export default function SanityWorkClient({
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\SanityWorkClient.tsx:126: }: SanityWorkClientProps) {
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:139: function applyPersianCanvas() {
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:186: export default function WorkCanvasPersianRuntime() {
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:194: applyPersianCanvas()
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:158: setText(".work-eyebrow", "بوم آثار")
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:244: .work-page.is-force-fa .work-eyebrow {
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:159: setText(".work-hero h1", "آرشیو بصری")
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:239: .work-page.is-force-fa .work-hero {
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:250: .work-page.is-force-fa .work-hero h1 {
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:161: ".work-intro",
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:256: .work-page.is-force-fa .work-intro {
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:186: export default function WorkCanvasPersianRuntime() {
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:94: if (html.dataset.lang === "fa" || html.dataset.locale === "fa") return true
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:95: if (body?.dataset.lang === "fa" || body?.dataset.locale === "fa") return true
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:97: if (pathAndSearch.includes("/fa") || pathAndSearch.includes("lang=fa") || pathAndSearch.includes("locale=fa")) return true
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:121: document.querySelectorAll("button, a, [role='button'], [aria-label*='language' i], [class*='lang' i], [class*='locale' i]")
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:204: attributeFilter: ["lang", "dir", "class", "data-lang", "data-locale"],
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:31: "food brand identity and packaging system with a bold, warm, and appetizing visual language.":
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:86: const lang = html.lang?.toLowerCase() || ""
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:93: if (lang.startsWith("fa") || dir === "rtl") return true
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:94: if (html.dataset.lang === "fa" || html.dataset.locale === "fa") return true
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:95: if (body?.dataset.lang === "fa" || body?.dataset.locale === "fa") return true
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:97: if (pathAndSearch.includes("/fa") || pathAndSearch.includes("lang=fa") || pathAndSearch.includes("locale=fa")) return true
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:120: const languageControls = Array.from(
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:121: document.querySelectorAll("button, a, [role='button'], [aria-label*='language' i], [class*='lang' i], [class*='locale' i]")
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:124: const hasEnglishSwitch = languageControls.some((element) => {
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:129: const hasPersianSwitch = languageControls.some((element) => {
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:149: page.setAttribute("lang", "en")
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:156: page.setAttribute("lang", "fa-IR")
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:204: attributeFilter: ["lang", "dir", "class", "data-lang", "data-locale"],
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:212: window.addEventListener("languagechange", run)
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:228: window.removeEventListener("languagechange", run)
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCanvasPersianRuntime.tsx:110: if (storageHasFa(window.localStorage)) return true
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCinematicShell.tsx:6: import WorkCanvasPersianRuntime from "@/components/work/WorkCanvasPersianRuntime"
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCinematicShell.tsx:16: <WorkCanvasPersianRuntime />
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCinematicShell.tsx:6: import WorkCanvasPersianRuntime from "@/components/work/WorkCanvasPersianRuntime"
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCinematicShell.tsx:16: <WorkCanvasPersianRuntime />
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCinematicShell.tsx:9: type WorkCinematicShellProps = {
+F:\2TB\Files\Web\reza-portfolio\src\app\src\components\work\WorkCinematicShell.tsx:13: export default function WorkCinematicShell({children}: WorkCinematicShellProps) {
+F:\2TB\Files\Web\reza-portfolio\src\app\work\page.tsx:7: type WorkCanvasItem = Record<string, unknown>
+F:\2TB\Files\Web\reza-portfolio\src\app\work\page.tsx:9: const fallbackCategories: WorkCanvasItem[] = [
+F:\2TB\Files\Web\reza-portfolio\src\app\work\page.tsx:23: const fallbackProjects: WorkCanvasItem[] = [
+F:\2TB\Files\Web\reza-portfolio\src\app\work\page.tsx:82: safeSanityFetch<WorkCanvasItem[]>(
+F:\2TB\Files\Web\reza-portfolio\src\app\work\page.tsx:84: () => client.fetch<WorkCanvasItem[]>(projectsQuery, {}, {next: {revalidate: 60}}),
+F:\2TB\Files\Web\reza-portfolio\src\app\work\page.tsx:87: safeSanityFetch<WorkCanvasItem[]>(
+F:\2TB\Files\Web\reza-portfolio\src\app\work\page.tsx:89: () => client.fetch<WorkCanvasItem[]>(categoriesQuery, {}, {next: {revalidate: 60}}),
+F:\2TB\Files\Web\reza-portfolio\src\app\work\page.tsx:1: import SanityWorkClient from "@/components/work/SanityWorkClient"
+F:\2TB\Files\Web\reza-portfolio\src\app\work\page.tsx:94: return <SanityWorkClient projects={projects} categories={categories} />
+F:\2TB\Files\Web\reza-portfolio\src\app\work\page.tsx:38: shortDescriptionEn: "Food brand identity and packaging system with a bold, warm, and appetizing visual language.",
+F:\2TB\Files\Web\reza-portfolio\src\app\layout.tsx:1: import LanguageTransitionFX from "@/components/LanguageTransitionFX"
+F:\2TB\Files\Web\reza-portfolio\src\app\layout.tsx:111: <LanguageTransitionFX>{children}</LanguageTransitionFX>
+F:\2TB\Files\Web\reza-portfolio\src\app\layout.tsx:1: import LanguageTransitionFX from "@/components/LanguageTransitionFX"
+F:\2TB\Files\Web\reza-portfolio\src\app\layout.tsx:8: import { LanguageProvider } from "@/components/LanguageProvider";
+F:\2TB\Files\Web\reza-portfolio\src\app\layout.tsx:103: <html lang="en" data-scroll-behavior="smooth">
+F:\2TB\Files\Web\reza-portfolio\src\app\layout.tsx:105: <LanguageProvider>
+F:\2TB\Files\Web\reza-portfolio\src\app\layout.tsx:111: <LanguageTransitionFX>{children}</LanguageTransitionFX>
+F:\2TB\Files\Web\reza-portfolio\src\app\layout.tsx:114: </LanguageProvider>
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:92: primary: "View Canvas",
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:216: window.localStorage.getItem("locale"),
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:218: window.localStorage.getItem("NEXT_LOCALE"),
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:26: type Lang = "fa" | "en"
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:109: ["Brand Identity", "A refined visual language for brands that need to feel unmistakable."],
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:177: function normalizeLang(value: string | null | undefined): Lang | null {
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:204: function getLang(): Lang {
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:214: window.localStorage.getItem("lang"),
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:215: window.localStorage.getItem("language"),
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:222: const normalized = normalizeLang(item)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:230: const htmlLang = normalizeLang(document.documentElement.getAttribute("lang"))
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:231: const bodyLang = normalizeLang(document.body?.getAttribute("lang"))
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:233: if (htmlLang) return htmlLang
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:234: if (bodyLang) return bodyLang
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:236: const htmlDir = normalizeLang(document.documentElement.getAttribute("dir"))
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:237: const bodyDir = normalizeLang(document.body?.getAttribute("dir"))
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:247: const [lang, setLang] = useState<Lang>("fa")
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:250: const languageStableSync = () => {
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:251: setLang(getLang())
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:254: const scheduleLanguageStableSync = () => {
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:255: window.setTimeout(languageStableSync, 80)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:258: document.addEventListener("click", scheduleLanguageStableSync, true)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:259: window.addEventListener("popstate", scheduleLanguageStableSync)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:260: window.addEventListener("storage", scheduleLanguageStableSync)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:261: window.addEventListener("languagechange", scheduleLanguageStableSync)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:264: document.removeEventListener("click", scheduleLanguageStableSync, true)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:265: window.removeEventListener("popstate", scheduleLanguageStableSync)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:266: window.removeEventListener("storage", scheduleLanguageStableSync)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:267: window.removeEventListener("languagechange", scheduleLanguageStableSync)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:271: const languageTransitionRestoreSync = () => {
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:272: setLang(getLang())
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:275: const scheduleLanguageTransitionRestoreSync = () => {
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:276: window.setTimeout(languageTransitionRestoreSync, 0)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:277: window.setTimeout(languageTransitionRestoreSync, 80)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:278: window.setTimeout(languageTransitionRestoreSync, 220)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:281: const observer = new MutationObserver(scheduleLanguageTransitionRestoreSync)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:285: attributeFilter: ["lang", "dir", "class"],
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:291: attributeFilter: ["lang", "dir", "class"],
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:295: document.addEventListener("click", scheduleLanguageTransitionRestoreSync, true)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:296: window.addEventListener("storage", scheduleLanguageTransitionRestoreSync)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:297: window.addEventListener("popstate", scheduleLanguageTransitionRestoreSync)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:298: window.addEventListener("languagechange", scheduleLanguageTransitionRestoreSync)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:302: document.removeEventListener("click", scheduleLanguageTransitionRestoreSync, true)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:303: window.removeEventListener("storage", scheduleLanguageTransitionRestoreSync)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:304: window.removeEventListener("popstate", scheduleLanguageTransitionRestoreSync)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:305: window.removeEventListener("languagechange", scheduleLanguageTransitionRestoreSync)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:309: const syncHomeLanguageAfterTransitionSafe = () => {
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:310: setLang(getLang())
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:313: const scheduleSyncHomeLanguageAfterTransitionSafe = () => {
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:314: window.setTimeout(syncHomeLanguageAfterTransitionSafe, 0)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:315: window.setTimeout(syncHomeLanguageAfterTransitionSafe, 90)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:316: window.setTimeout(syncHomeLanguageAfterTransitionSafe, 240)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:317: window.setTimeout(syncHomeLanguageAfterTransitionSafe, 420)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:320: syncHomeLanguageAfterTransitionSafe()
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:322: const observer = new MutationObserver(scheduleSyncHomeLanguageAfterTransitionSafe)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:326: attributeFilter: ["lang", "dir", "class"],
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:332: attributeFilter: ["lang", "dir", "class"],
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:336: document.addEventListener("click", scheduleSyncHomeLanguageAfterTransitionSafe, true)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:337: window.addEventListener("storage", scheduleSyncHomeLanguageAfterTransitionSafe)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:338: window.addEventListener("popstate", scheduleSyncHomeLanguageAfterTransitionSafe)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:339: window.addEventListener("languagechange", scheduleSyncHomeLanguageAfterTransitionSafe)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:343: document.removeEventListener("click", scheduleSyncHomeLanguageAfterTransitionSafe, true)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:344: window.removeEventListener("storage", scheduleSyncHomeLanguageAfterTransitionSafe)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:345: window.removeEventListener("popstate", scheduleSyncHomeLanguageAfterTransitionSafe)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:346: window.removeEventListener("languagechange", scheduleSyncHomeLanguageAfterTransitionSafe)
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:349: const isFa = lang === "fa"
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:350: const t = copy[lang]
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:214: window.localStorage.getItem("lang"),
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:215: window.localStorage.getItem("language"),
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:216: window.localStorage.getItem("locale"),
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:217: window.localStorage.getItem("i18nextLng"),
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:218: window.localStorage.getItem("NEXT_LOCALE"),
+F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx:227: // ignore localStorage access issues
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:29: export default function CanvasCinematicUpgrade() {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:60: root.style.setProperty("--canvas-mx", current.x.toFixed(2) + "px")
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:61: root.style.setProperty("--canvas-my", current.y.toFixed(2) + "px")
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:62: root.style.setProperty("--canvas-scroll", current.scroll.toFixed(2) + "px")
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:84: const root = document.querySelector(".canvas-page-shell")
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:99: pageMain.classList.add("canvas-unified-main")
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:111: element.classList.add("canvas-premium-card")
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:112: element.dataset.canvasCard = "true"
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:124: if (element.closest("[data-canvas-card='true']")) return false
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:134: element.classList.add("canvas-premium-chip")
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:137: element.classList.add("canvas-duplicate-chip")
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:141: element.classList.remove("canvas-duplicate-chip")
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:159: const card = target?.closest("[data-canvas-card='true']") as HTMLElement | null
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:211: <div ref={rootRef} className="canvas-cinematic-upgrade" aria-hidden="true">
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:212: <div className="canvas-cine-base" />
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:213: <div className="canvas-cine-vignette" />
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:215: <div className="canvas-cine-orbit canvas-cine-orbit-main" />
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:216: <div className="canvas-cine-orbit canvas-cine-orbit-wide" />
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:217: <div className="canvas-cine-orbit canvas-cine-orbit-slice" />
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:219: <div className="canvas-cine-light canvas-cine-light-left" />
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:220: <div className="canvas-cine-light canvas-cine-light-right" />
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:221: <div className="canvas-cine-light canvas-cine-light-cursor" />
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:223: <div className="canvas-cine-film" />
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:224: <div className="canvas-cine-grain" />
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:228: key={"canvas-streak-" + item.id}
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:229: className="canvas-cine-streak"
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:245: key={"canvas-star-" + item.id}
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:246: className="canvas-cine-star"
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:266: .canvas-page-shell {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:274: .canvas-page-content {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:279: .canvas-page-shell main,
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:280: .canvas-page-shell section {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:284: .canvas-page-shell main {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:294: .canvas-page-shell main > * {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:300: .canvas-page-shell main,
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:301: .canvas-page-shell main * {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:305: .canvas-page-shell main [dir="rtl"],
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:306: .canvas-page-shell main [dir="ltr"] {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:310: .canvas-cinematic-upgrade {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:311: --canvas-mx: 58vw;
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:312: --canvas-my: 42vh;
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:313: --canvas-scroll: 0px;
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:326: .canvas-cine-base {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:336: .canvas-cine-vignette {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:344: .canvas-cine-orbit {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:350: transform: translate3d(-50%, calc(-50% + var(--canvas-scroll) * 0.1), 0);
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:357: .canvas-cine-orbit-main {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:364: animation: canvasOrbitBreathe 18s ease-in-out infinite;
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:367: .canvas-cine-orbit-wide {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:373: transform: translate3d(-50%, calc(-50% + var(--canvas-scroll) * 0.07), 0) rotate(-14deg);
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:377: .canvas-cine-orbit-slice {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:383: transform: translate3d(-50%, calc(-50% + var(--canvas-scroll) * 0.045), 0) rotate(10deg);
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:387: .canvas-cine-light {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:395: .canvas-cine-light-left {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:403: animation: canvasLightLeft 20s ease-in-out infinite;
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:406: .canvas-cine-light-right {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:414: animation: canvasLightRight 22s ease-in-out infinite;
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:417: .canvas-cine-light-cursor {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:418: left: var(--canvas-mx);
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:419: top: var(--canvas-my);
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:428: .canvas-cine-film {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:442: .canvas-cine-grain {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:454: .canvas-cine-star {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:462: animation: canvasStarPulse var(--star-duration) ease-in-out var(--star-delay) infinite;
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:465: .canvas-cine-streak {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:477: animation: canvasStreakFly var(--streak-duration) ease-in-out var(--streak-delay) infinite;
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:480: .canvas-page-shell main h1 {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:497: .canvas-page-shell main h1::after {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:507: .canvas-page-shell main p {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:516: .canvas-page-shell main h1 + p,
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:517: .canvas-page-shell main p:first-of-type {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:521: .canvas-page-shell main h1,
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:522: .canvas-page-shell main h1 + p,
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:523: .canvas-page-shell main p:first-of-type {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:527: .canvas-premium-chip {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:552: .canvas-premium-chip::before {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:561: .canvas-premium-chip:hover {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:572: .canvas-premium-chip:hover::before {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:576: .canvas-duplicate-chip {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:580: .canvas-premium-card {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:611: .canvas-premium-card::before {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:624: .canvas-premium-card::after {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:634: .canvas-premium-card:hover {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:643: .canvas-premium-card:hover::before {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:647: .canvas-premium-card img {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:656: .canvas-premium-card:hover img {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:661: @keyframes canvasOrbitBreathe {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:664: transform: translate3d(-50%, calc(-50% + var(--canvas-scroll) * 0.1), 0) scale(0.98);
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:668: transform: translate3d(-50%, calc(-50% + var(--canvas-scroll) * 0.1), 0) scale(1.026);
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:672: @keyframes canvasLightLeft {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:683: @keyframes canvasLightRight {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:694: @keyframes canvasStarPulse {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:709: @keyframes canvasStreakFly {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:728: .canvas-page-shell main {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:732: .canvas-page-shell main > * {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:736: .canvas-page-shell main h1 {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:741: .canvas-cine-orbit-main {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:746: .canvas-cine-orbit-wide,
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:747: .canvas-cine-orbit-slice {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:751: .canvas-cine-light-left {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:757: .canvas-cine-light-right {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:763: .canvas-premium-card {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:768: .canvas-premium-card::after {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:774: .canvas-cine-orbit-main,
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:775: .canvas-cine-light-left,
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:776: .canvas-cine-light-right,
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:777: .canvas-cine-star,
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:778: .canvas-cine-streak {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:782: .canvas-premium-card,
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:783: .canvas-premium-card img,
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:784: .canvas-premium-chip {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasCinematicUpgrade.tsx:29: export default function CanvasCinematicUpgrade() {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasPageShell.tsx:4: import CanvasCinematicUpgrade from "@/components/work/CanvasCinematicUpgrade"
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasPageShell.tsx:6: type CanvasPageShellProps = {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasPageShell.tsx:10: export default function CanvasPageShell({children}: CanvasPageShellProps) {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasPageShell.tsx:12: <div className="canvas-page-shell">
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasPageShell.tsx:13: <CanvasCinematicUpgrade />
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasPageShell.tsx:15: <div className="canvas-page-content">
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasPageShell.tsx:6: type CanvasPageShellProps = {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasPageShell.tsx:10: export default function CanvasPageShell({children}: CanvasPageShellProps) {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasPageShell.tsx:4: import CanvasCinematicUpgrade from "@/components/work/CanvasCinematicUpgrade"
+F:\2TB\Files\Web\reza-portfolio\src\components\work\CanvasPageShell.tsx:13: <CanvasCinematicUpgrade />
+F:\2TB\Files\Web\reza-portfolio\src\components\work\SanityWorkClient.tsx:155: <h1>Visual archive</h1>
+F:\2TB\Files\Web\reza-portfolio\src\components\work\SanityWorkClient.tsx:154: <p className="work-eyebrow">Canvas</p>
+F:\2TB\Files\Web\reza-portfolio\src\components\work\SanityWorkClient.tsx:154: <p className="work-eyebrow">Canvas</p>
+F:\2TB\Files\Web\reza-portfolio\src\components\work\SanityWorkClient.tsx:279: .work-eyebrow {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\SanityWorkClient.tsx:153: <div className="work-hero">
+F:\2TB\Files\Web\reza-portfolio\src\components\work\SanityWorkClient.tsx:273: .work-hero {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\SanityWorkClient.tsx:288: .work-hero h1 {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\SanityWorkClient.tsx:601: .work-hero h1 {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\SanityWorkClient.tsx:157: <p className="work-intro">
+F:\2TB\Files\Web\reza-portfolio\src\components\work\SanityWorkClient.tsx:305: .work-intro {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\SanityWorkClient.tsx:7: type SanityWorkClientProps = {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\SanityWorkClient.tsx:123: export default function SanityWorkClient({
+F:\2TB\Files\Web\reza-portfolio\src\components\work\SanityWorkClient.tsx:126: }: SanityWorkClientProps) {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\WorkCinematicShell.tsx:8: type WorkCinematicShellProps = {
+F:\2TB\Files\Web\reza-portfolio\src\components\work\WorkCinematicShell.tsx:12: export default function WorkCinematicShell({children}: WorkCinematicShellProps) {
+F:\2TB\Files\Web\reza-portfolio\src\components\FeaturedWorks.tsx:7: import { useLanguage } from "@/components/LanguageProvider";
+F:\2TB\Files\Web\reza-portfolio\src\components\FeaturedWorks.tsx:13: const { t, lang } = useLanguage();
+F:\2TB\Files\Web\reza-portfolio\src\components\FeaturedWorks.tsx:14: const isFa = lang === "fa";
+F:\2TB\Files\Web\reza-portfolio\src\components\Hero.tsx:6: import { useLanguage } from "@/components/LanguageProvider";
+F:\2TB\Files\Web\reza-portfolio\src\components\Hero.tsx:30: const { t, lang } = useLanguage();
+F:\2TB\Files\Web\reza-portfolio\src\components\Hero.tsx:31: const isFa = lang === "fa";
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageProvider.tsx:10: import { dictionary, type Dictionary, type Lang } from "@/lib/i18n";
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageProvider.tsx:12: type LanguageContextValue = {
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageProvider.tsx:13: lang: Lang;
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageProvider.tsx:14: setLang: (lang: Lang) => void;
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageProvider.tsx:15: toggleLang: () => void;
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageProvider.tsx:19: const LanguageContext = createContext<LanguageContextValue | null>(null);
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageProvider.tsx:21: export function LanguageProvider({
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageProvider.tsx:26: const [lang, setLang] = useState<Lang>("en");
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageProvider.tsx:29: const savedLang = window.localStorage.getItem("lemm-studio-lang");
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageProvider.tsx:31: if (savedLang === "fa" || savedLang === "en") {
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageProvider.tsx:32: setLang(savedLang);
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageProvider.tsx:37: document.documentElement.lang = lang;
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageProvider.tsx:38: document.documentElement.dir = lang === "fa" ? "rtl" : "ltr";
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageProvider.tsx:39: window.localStorage.setItem("lemm-studio-lang", lang);
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageProvider.tsx:40: }, [lang]);
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageProvider.tsx:44: lang,
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageProvider.tsx:45: setLang,
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageProvider.tsx:46: toggleLang: () => setLang((current) => (current === "en" ? "fa" : "en")),
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageProvider.tsx:47: t: dictionary[lang],
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageProvider.tsx:49: [lang],
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageProvider.tsx:53: <LanguageContext.Provider value={value}>
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageProvider.tsx:55: </LanguageContext.Provider>
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageProvider.tsx:59: export function useLanguage() {
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageProvider.tsx:60: const context = useContext(LanguageContext);
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageProvider.tsx:63: throw new Error("useLanguage must be used inside LanguageProvider");
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageProvider.tsx:29: const savedLang = window.localStorage.getItem("lemm-studio-lang");
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageProvider.tsx:39: window.localStorage.setItem("lemm-studio-lang", lang);
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageToggle.tsx:4: import { useLanguage } from "@/components/LanguageProvider";
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageToggle.tsx:6: export default function LanguageToggle() {
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageToggle.tsx:7: const { lang, toggleLang, t } = useLanguage();
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageToggle.tsx:11: onClick={toggleLang}
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageToggle.tsx:16: aria-label="Switch language"
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageToggle.tsx:18: {lang === "en" ? "FA" : t.language.switchTo}
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:167: type LanguageTransitionFXProps = {
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:171: export function LanguageTransitionFX({children}: LanguageTransitionFXProps) {
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:430: export default LanguageTransitionFX
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:11: locale?: TargetLang
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:40: text.includes("locale=fa") ||
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:57: text.includes("locale=en") ||
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:74: window.localStorage.getItem("locale"),
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:76: window.localStorage.getItem("NEXT_LOCALE"),
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:102: "[data-lang], [data-language], [data-locale], [data-target-lang], [data-next-lang], [data-language-switch], [data-language-toggle], button, [role='button'], a"
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:135: element.getAttribute("data-locale"),
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:155: element.hasAttribute("data-locale") ||
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:263: languageEvent.detail?.locale
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:6: type TargetLang = "fa" | "en"
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:8: type LanguageEvent = CustomEvent<{
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:9: lang?: TargetLang
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:10: language?: TargetLang
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:11: locale?: TargetLang
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:16: lemmLanguageTransition?: (lang: TargetLang) => void
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:39: text.includes("lang=fa") ||
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:41: text.includes("language=fa")
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:56: text.includes("lang=en") ||
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:58: text.includes("language=en")
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:62: function getCurrentLang(): TargetLang {
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:72: window.localStorage.getItem("lang"),
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:73: window.localStorage.getItem("language"),
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:87: const htmlLang = document.documentElement.getAttribute("lang")
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:89: const bodyLang = document.body?.getAttribute("lang")
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:92: if (hasFaSignal(htmlLang) || hasFaSignal(htmlDir) || hasFaSignal(bodyLang) || hasFaSignal(bodyDir)) return "fa"
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:93: if (hasEnSignal(htmlLang) || hasEnSignal(htmlDir) || hasEnSignal(bodyLang) || hasEnSignal(bodyDir)) return "en"
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:98: function detectLanguageTarget(target: EventTarget | null): TargetLang | null {
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:102: "[data-lang], [data-language], [data-locale], [data-target-lang], [data-next-lang], [data-language-switch], [data-language-toggle], button, [role='button'], a"
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:130: element.getAttribute("data-target-lang"),
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:131: element.getAttribute("data-next-lang"),
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:133: element.getAttribute("data-lang"),
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:134: element.getAttribute("data-language"),
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:150: const isLanguageToggle =
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:151: element.hasAttribute("data-language-switch") ||
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:152: element.hasAttribute("data-language-toggle") ||
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:153: element.hasAttribute("data-lang") ||
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:154: element.hasAttribute("data-language") ||
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:156: element.hasAttribute("data-target-lang") ||
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:157: element.hasAttribute("data-next-lang") ||
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:160: if (isLanguageToggle) {
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:161: return getCurrentLang() === "fa" ? "en" : "fa"
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:167: type LanguageTransitionFXProps = {
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:171: export function LanguageTransitionFX({children}: LanguageTransitionFXProps) {
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:173: const currentLangRef = useRef<TargetLang>("fa")
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:174: const clickedLangRef = useRef<TargetLang | null>(null)
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:175: const clickedLangTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:180: const [targetLang, setTargetLang] = useState<TargetLang>("fa")
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:182: const isFa = targetLang === "fa"
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:184: const subtitle = isFa ? "\u062f\u0631 \u062d\u0627\u0644 \u062a\u063a\u06cc\u06cc\u0631 \u0632\u0628\u0627\u0646" : "SWITCHING LANGUAGE"
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:190: const rememberClickedLang = (lang: TargetLang | null) => {
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:191: if (!lang) return
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:193: clickedLangRef.current = lang
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:195: if (clickedLangTimerRef.current) clearTimeout(clickedLangTimerRef.current)
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:197: clickedLangTimerRef.current = setTimeout(() => {
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:198: clickedLangRef.current = null
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:202: const consumeClickedLang = () => {
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:203: const lang = clickedLangRef.current
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:204: clickedLangRef.current = null
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:206: if (clickedLangTimerRef.current) {
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:207: clearTimeout(clickedLangTimerRef.current)
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:208: clickedLangTimerRef.current = null
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:211: return lang
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:214: const play = (lang: TargetLang, force = false) => {
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:222: currentLangRef.current = lang
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:223: setTargetLang(lang)
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:234: currentLangRef.current = getCurrentLang()
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:235: setTargetLang(currentLangRef.current)
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:237: window.lemmLanguageTransition = (lang: TargetLang) => {
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:238: const clickedLang = consumeClickedLang()
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:239: play(clickedLang || lang, true)
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:243: delete window.lemmLanguageTransition
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:246: if (clickedLangTimerRef.current) clearTimeout(clickedLangTimerRef.current)
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:252: const clickedLang = consumeClickedLang()
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:254: if (clickedLang) {
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:255: play(clickedLang, true)
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:259: const languageEvent = event as LanguageEvent
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:260: const lang =
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:261: languageEvent.detail?.lang ||
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:262: languageEvent.detail?.language ||
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:263: languageEvent.detail?.locale
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:265: if (!lang) return
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:266: play(lang, true)
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:270: rememberClickedLang(detectLanguageTarget(event.target))
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:275: rememberClickedLang(detectLanguageTarget(event.target))
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:279: const lang = consumeClickedLang() || detectLanguageTarget(event.target)
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:280: if (!lang) return
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:283: play(lang, true)
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:290: const lang = consumeClickedLang() || detectLanguageTarget(event.target)
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:291: if (!lang) return
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:294: play(lang, true)
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:298: window.addEventListener("app:language-change-intent", onIntent)
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:299: window.addEventListener("lemm:language-transition", onIntent)
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:300: window.addEventListener("language-transition", onIntent)
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:308: window.removeEventListener("app:language-change-intent", onIntent)
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:309: window.removeEventListener("lemm:language-transition", onIntent)
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:310: window.removeEventListener("language-transition", onIntent)
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:410: lang={targetLang}
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:430: export default LanguageTransitionFX
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:72: window.localStorage.getItem("lang"),
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:73: window.localStorage.getItem("language"),
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:74: window.localStorage.getItem("locale"),
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:75: window.localStorage.getItem("i18nextLng"),
+F:\2TB\Files\Web\reza-portfolio\src\components\LanguageTransitionFX.tsx:76: window.localStorage.getItem("NEXT_LOCALE"),
+F:\2TB\Files\Web\reza-portfolio\src\components\Navbar.tsx:20: { label: t.nav.canvas, href: "/work" },
+F:\2TB\Files\Web\reza-portfolio\src\components\Navbar.tsx:7: import LanguageToggle from "@/components/LanguageToggle";
+F:\2TB\Files\Web\reza-portfolio\src\components\Navbar.tsx:8: import { useLanguage } from "@/components/LanguageProvider";
+F:\2TB\Files\Web\reza-portfolio\src\components\Navbar.tsx:13: const { t, lang } = useLanguage();
+F:\2TB\Files\Web\reza-portfolio\src\components\Navbar.tsx:16: const isFa = lang === "fa";
+F:\2TB\Files\Web\reza-portfolio\src\components\Navbar.tsx:59: <LanguageToggle />
+F:\2TB\Files\Web\reza-portfolio\src\components\Navbar.tsx:63: <LanguageToggle />
+F:\2TB\Files\Web\reza-portfolio\src\components\Navbar.tsx:68: aria-label={isOpen ? t.language.close : t.language.menu}
+F:\2TB\Files\Web\reza-portfolio\src\components\PortfolioPdfShowcase.tsx:21: import {useLanguage} from "@/components/LanguageProvider"
+F:\2TB\Files\Web\reza-portfolio\src\components\PortfolioPdfShowcase.tsx:24: type Lang = "en" | "fa"
+F:\2TB\Files\Web\reza-portfolio\src\components\PortfolioPdfShowcase.tsx:38: function safeText(value: AnyText, lang: Lang): string {
+F:\2TB\Files\Web\reza-portfolio\src\components\PortfolioPdfShowcase.tsx:44: const primary = lang === "fa" ? value.fa ?? value.titleFa : value.en ?? value.titleEn
+F:\2TB\Files\Web\reza-portfolio\src\components\PortfolioPdfShowcase.tsx:45: const fallback = lang === "fa" ? value.en ?? value.titleEn : value.fa ?? value.titleFa
+F:\2TB\Files\Web\reza-portfolio\src\components\PortfolioPdfShowcase.tsx:58: function projectTitle(project: SanityProject, lang: Lang) {
+F:\2TB\Files\Web\reza-portfolio\src\components\PortfolioPdfShowcase.tsx:59: return lang === "fa"
+F:\2TB\Files\Web\reza-portfolio\src\components\PortfolioPdfShowcase.tsx:60: ? safeText(project.titleFa, lang) || safeText(project.titleEn, lang)
+F:\2TB\Files\Web\reza-portfolio\src\components\PortfolioPdfShowcase.tsx:61: : safeText(project.titleEn, lang) || safeText(project.titleFa, lang)
+F:\2TB\Files\Web\reza-portfolio\src\components\PortfolioPdfShowcase.tsx:69: const {lang} = useLanguage()
+F:\2TB\Files\Web\reza-portfolio\src\components\PortfolioPdfShowcase.tsx:70: const isFa = lang === "fa"
+F:\2TB\Files\Web\reza-portfolio\src\components\PortfolioPdfShowcase.tsx:71: const title = projectTitle(project, lang)
+F:\2TB\Files\Web\reza-portfolio\src\components\PremiumProjectGalleryV3.tsx:27: lang: "fa" | "en"
+F:\2TB\Files\Web\reza-portfolio\src\components\PremiumProjectGalleryV3.tsx:57: lang,
+F:\2TB\Files\Web\reza-portfolio\src\components\PremiumProjectGalleryV3.tsx:59: const isFa = lang === "fa"
+F:\2TB\Files\Web\reza-portfolio\src\components\PremiumProjectGalleryV3.tsx:142: }, [gallery.length, title, lang])
+F:\2TB\Files\Web\reza-portfolio\src\components\PremiumProjectGalleryV5.tsx:31: lang: "fa" | "en"
+F:\2TB\Files\Web\reza-portfolio\src\components\PremiumProjectGalleryV5.tsx:66: export default function PremiumProjectGalleryV5({images, title, lang}: Props) {
+F:\2TB\Files\Web\reza-portfolio\src\components\PremiumProjectGalleryV5.tsx:67: const isFa = lang === "fa"
+F:\2TB\Files\Web\reza-portfolio\src\components\PremiumProjectGalleryV5.tsx:167: }, [gallery.length, title, lang])
+F:\2TB\Files\Web\reza-portfolio\src\components\ProjectCard.tsx:5: import { useLanguage } from "@/components/LanguageProvider";
+F:\2TB\Files\Web\reza-portfolio\src\components\ProjectCard.tsx:14: const { t, lang } = useLanguage();
+F:\2TB\Files\Web\reza-portfolio\src\components\ProjectCard.tsx:15: const isFa = lang === "fa";
+F:\2TB\Files\Web\reza-portfolio\src\components\ProjectCard.tsx:44: {getCategoryLabel(project.categoryId, lang)}
+F:\2TB\Files\Web\reza-portfolio\src\components\ProjectCard.tsx:52: {project.title[lang]}
+F:\2TB\Files\Web\reza-portfolio\src\components\ProjectCard.tsx:76: {project.description[lang]}
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:16: import {useLanguage} from "@/components/LanguageProvider"
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:21: type Lang = "en" | "fa"
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:35: function safeText(value: AnyText, lang: Lang): string {
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:41: const primary = lang === "fa" ? value.fa ?? value.titleFa : value.en ?? value.titleEn
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:42: const fallback = lang === "fa" ? value.en ?? value.titleEn : value.fa ?? value.titleFa
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:55: function projectTitle(project: SanityProject, lang: Lang) {
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:56: return lang === "fa"
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:57: ? safeText(project.titleFa, lang) || safeText(project.titleEn, lang)
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:58: : safeText(project.titleEn, lang) || safeText(project.titleFa, lang)
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:61: function pickText(en?: string, faText?: string, lang?: Lang) {
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:62: return lang === "fa" ? faText || en || "" : en || faText || ""
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:70: const {lang} = useLanguage()
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:71: const isFa = lang === "fa"
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:73: const title = projectTitle(project, lang)
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:75: ? safeText(project.category?.titleFa, lang) || safeText(project.category?.titleEn, lang)
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:76: : safeText(project.category?.titleEn, lang) || safeText(project.category?.titleFa, lang)
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:79: ? safeText(project.roleFa, lang) || safeText(project.roleEn, lang)
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:80: : safeText(project.roleEn, lang) || safeText(project.roleFa, lang)
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:83: ? safeText(project.shortDescriptionFa, lang) || safeText(project.shortDescriptionEn, lang)
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:84: : safeText(project.shortDescriptionEn, lang) || safeText(project.shortDescriptionFa, lang)
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:87: ? safeText(project.overviewFa, lang) || safeText(project.overviewEn, lang)
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:88: : safeText(project.overviewEn, lang) || safeText(project.overviewFa, lang)
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:91: ? safeText(project.challengeFa, lang) || safeText(project.challengeEn, lang)
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:92: : safeText(project.challengeEn, lang) || safeText(project.challengeFa, lang)
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:95: ? safeText(project.solutionFa, lang) || safeText(project.solutionEn, lang)
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:96: : safeText(project.solutionEn, lang) || safeText(project.solutionFa, lang)
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:106: ? safeText(image.altFa, lang) || safeText(image.altEn, lang) || `${title} ${index + 1}`
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:107: : safeText(image.altEn, lang) || safeText(image.altFa, lang) || `${title} ${index + 1}`,
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:250: alt={safeText(project.coverImage?.altEn, lang) || title}
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:350: ? safeText(item.titleFa, lang) || safeText(item.titleEn, lang)
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:351: : safeText(item.titleEn, lang) || safeText(item.titleFa, lang)
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityProjectDetailClient.tsx:399: lang={isFa ? "fa" : "en"}
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:163: {safeText(t.canvas.eyebrow, lang)}
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:170: {safeText(t.canvas.title, lang)}
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:177: {safeText(t.canvas.description, lang)}
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:15: type SanityWorkClientProps = {
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:139: export default function SanityWorkClient({projects, categories}: SanityWorkClientProps) {
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:8: import {useLanguage} from "@/components/LanguageProvider"
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:12: type Lang = "en" | "fa"
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:20: function safeText(value: AnyText, lang: Lang): string {
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:26: const primary = lang === "fa" ? value.fa ?? value.titleFa : value.en ?? value.titleEn
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:27: const fallback = lang === "fa" ? value.en ?? value.titleEn : value.fa ?? value.titleFa
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:36: function getProjectTitle(project: SanityProject, lang: Lang) {
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:37: return safeText(project.titleEn, lang) || safeText(project.titleFa, lang) || "Untitled"
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:40: function getProjectDescription(project: SanityProject, lang: Lang) {
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:41: return lang === "fa"
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:42: ? safeText(project.shortDescriptionFa, lang) || safeText(project.shortDescriptionEn, lang)
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:43: : safeText(project.shortDescriptionEn, lang) || safeText(project.shortDescriptionFa, lang)
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:46: function getCategoryTitle(category: SanityCategory | null | undefined, lang: Lang) {
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:47: if (!category) return lang === "fa" ? "بدون دسته‌بندی" : "Uncategorized"
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:49: return lang === "fa"
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:50: ? safeText(category.titleFa, lang) || safeText(category.titleEn, lang)
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:51: : safeText(category.titleEn, lang) || safeText(category.titleFa, lang)
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:54: function getImageAlt(project: SanityProject, lang: Lang) {
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:55: return lang === "fa"
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:56: ? safeText(project.coverImage?.altFa, lang) || getProjectTitle(project, lang)
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:57: : safeText(project.coverImage?.altEn, lang) || getProjectTitle(project, lang)
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:61: const {lang, t} = useLanguage()
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:62: const isFa = lang === "fa"
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:81: alt={getImageAlt(project, lang)}
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:95: {getCategoryTitle(project.category, lang)}
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:103: {getProjectTitle(project, lang)}
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:121: {getProjectDescription(project, lang)}
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:127: key={`${safeText(tool as AnyText, lang)}-${index}`}
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:130: {safeText(tool as AnyText, lang)}
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:140: const {t, lang} = useLanguage()
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:141: const isFa = lang === "fa"
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:163: {safeText(t.canvas.eyebrow, lang)}
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:170: {safeText(t.canvas.title, lang)}
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:177: {safeText(t.canvas.description, lang)}
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:190: {safeText(t.common.all, lang)}
+F:\2TB\Files\Web\reza-portfolio\src\components\SanityWorkClient.tsx:203: {getCategoryTitle(category, lang)}
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:23: en: "Canvas",
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:8: type Lang = "en" | "fa"
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:11: language?: Lang
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:12: onLanguageChange?: (language: Lang) => void
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:38: function getInitialLanguage(): Lang {
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:41: const saved = window.localStorage.getItem("lemm-language")
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:44: const htmlLang = document.documentElement.lang
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:47: if (htmlLang === "fa" || htmlDir === "rtl") return "fa"
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:53: language,
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:54: onLanguageChange,
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:57: const [internalLanguage, setInternalLanguage] = useState<Lang>("en")
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:64: if (!language) {
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:65: setInternalLanguage(getInitialLanguage())
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:67: }, [language])
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:70: const onLanguageEvent = (event: Event) => {
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:71: const customEvent = event as CustomEvent<{language?: Lang}>
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:72: const next = customEvent.detail?.language
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:75: setInternalLanguage(next)
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:79: window.addEventListener("lemm-language-change", onLanguageEvent)
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:80: window.addEventListener("language-change", onLanguageEvent)
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:83: window.removeEventListener("lemm-language-change", onLanguageEvent)
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:84: window.removeEventListener("language-change", onLanguageEvent)
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:88: const currentLanguage = language ?? internalLanguage
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:89: const isFa = currentLanguage === "fa"
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:90: const nextLanguage: Lang = isFa ? "en" : "fa"
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:103: const changeLanguage = () => {
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:106: if (!language) {
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:107: setInternalLanguage(nextLanguage)
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:110: onLanguageChange?.(nextLanguage)
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:113: window.localStorage.setItem("lemm-language", nextLanguage)
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:115: document.documentElement.lang = nextLanguage
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:116: document.documentElement.dir = nextLanguage === "fa" ? "rtl" : "ltr"
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:119: new CustomEvent("lemm-language-change", {
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:121: language: nextLanguage,
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:127: new CustomEvent("language-change", {
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:129: language: nextLanguage,
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:177: key="en-language-left"
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:179: data-language-switch
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:180: onClick={changeLanguage}
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:216: key="fa-language-right"
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:218: data-language-switch
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:219: onClick={changeLanguage}
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:324: data-language-switch
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:325: onClick={changeLanguage}
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:328: {nextLanguage.toUpperCase()}
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:41: const saved = window.localStorage.getItem("lemm-language")
+F:\2TB\Files\Web\reza-portfolio\src\components\StudioHeader.tsx:113: window.localStorage.setItem("lemm-language", nextLanguage)
+F:\2TB\Files\Web\reza-portfolio\src\components\WorkClient.tsx:6: import { useLanguage } from "@/components/LanguageProvider";
+F:\2TB\Files\Web\reza-portfolio\src\components\WorkClient.tsx:12: const { lang } = useLanguage();
+F:\2TB\Files\Web\reza-portfolio\src\components\WorkClient.tsx:42: {category.label[lang]}
+F:\2TB\Files\Web\reza-portfolio\src\data\projects.ts:1: import type { Lang } from "@/lib/i18n";
+F:\2TB\Files\Web\reza-portfolio\src\data\projects.ts:5: export type LocalizedText = Record<Lang, string>;
+F:\2TB\Files\Web\reza-portfolio\src\data\projects.ts:137: en: "Food brand identity and packaging system with a bold, warm, and appetizing visual language.",
+F:\2TB\Files\Web\reza-portfolio\src\data\projects.ts:209: export function getCategoryLabel(categoryId: string, lang: Lang) {
+F:\2TB\Files\Web\reza-portfolio\src\data\projects.ts:211: categories.find((category) => category.id === categoryId)?.label[lang] ??
+F:\2TB\Files\Web\reza-portfolio\src\lib\i18n.ts:50: title: "Visual archive",
+F:\2TB\Files\Web\reza-portfolio\src\lib\i18n.ts:18: canvas: "Canvas",
+F:\2TB\Files\Web\reza-portfolio\src\lib\i18n.ts:29: primaryButton: "View Canvas",
+F:\2TB\Files\Web\reza-portfolio\src\lib\i18n.ts:31: visualEyebrow: "Curated Canvas",
+F:\2TB\Files\Web\reza-portfolio\src\lib\i18n.ts:45: link: "View Canvas",
+F:\2TB\Files\Web\reza-portfolio\src\lib\i18n.ts:48: canvas: {
+F:\2TB\Files\Web\reza-portfolio\src\lib\i18n.ts:49: eyebrow: "Canvas",
+F:\2TB\Files\Web\reza-portfolio\src\lib\i18n.ts:102: canvas: "کانواس",
+F:\2TB\Files\Web\reza-portfolio\src\lib\i18n.ts:132: canvas: {
+F:\2TB\Files\Web\reza-portfolio\src\lib\i18n.ts:1: export type Lang = "en" | "fa";
+F:\2TB\Files\Web\reza-portfolio\src\lib\i18n.ts:10: language: {
+F:\2TB\Files\Web\reza-portfolio\src\lib\i18n.ts:94: language: {
+F:\2TB\Files\Web\reza-portfolio\src\lib\language-transition.ts:3: export type TargetLang = "fa" | "en"
+F:\2TB\Files\Web\reza-portfolio\src\lib\language-transition.ts:5: type ChangeLanguageOptions = {
+F:\2TB\Files\Web\reza-portfolio\src\lib\language-transition.ts:6: nextLang: TargetLang
+F:\2TB\Files\Web\reza-portfolio\src\lib\language-transition.ts:10: export function emitLanguageIntent(nextLang: TargetLang) {
+F:\2TB\Files\Web\reza-portfolio\src\lib\language-transition.ts:12: new CustomEvent("app:language-change-intent", {
+F:\2TB\Files\Web\reza-portfolio\src\lib\language-transition.ts:13: detail: {lang: nextLang},
+F:\2TB\Files\Web\reza-portfolio\src\lib\language-transition.ts:18: new CustomEvent("lemm:language-transition", {
+F:\2TB\Files\Web\reza-portfolio\src\lib\language-transition.ts:19: detail: {lang: nextLang},
+F:\2TB\Files\Web\reza-portfolio\src\lib\language-transition.ts:24: export function changeLanguageWithTransition({nextLang, navigate}: ChangeLanguageOptions) {
+F:\2TB\Files\Web\reza-portfolio\src\lib\language-transition.ts:25: emitLanguageIntent(nextLang)

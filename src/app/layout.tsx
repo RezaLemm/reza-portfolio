@@ -1,8 +1,8 @@
-import LanguageTransitionFX from "@/components/LanguageTransitionFX"
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import LanguageTransitionFX from "@/components/LanguageTransitionFX";
 import InteractiveBackground from "@/components/InteractiveBackground";
 import MotionConfigProvider from "@/components/MotionConfigProvider";
 import { LanguageProvider } from "@/components/LanguageProvider";

@@ -15,7 +15,7 @@ export const dictionary = {
 
     nav: {
       home: "Home",
-      canvas: "Canvas",
+      canvas: "Works",
       about: "About",
       contact: "Contact",
     },
@@ -46,7 +46,7 @@ export const dictionary = {
     },
 
     canvas: {
-      eyebrow: "Canvas",
+      eyebrow: "Works",
       title: "Visual archive",
       description:
         "A curated archive of visual experiments, AI artworks, thumbnails, banners, and creative studies.",
@@ -99,7 +99,7 @@ export const dictionary = {
 
     nav: {
       home: "خانه",
-      canvas: "کانواس",
+      canvas: "آثار",
       about: "درباره",
       contact: "تماس",
     },
@@ -110,9 +110,9 @@ export const dictionary = {
       titleBottom: "استودیو طراحی بصری",
       description:
         "پورتفولیوی طراحی بصری رضا موسی زاده، با تمرکز بر هویت بصری، تامبنیل، بنر، تصاویر تبلیغاتی، آثار مبتنی بر هوش مصنوعی و طراحی ارائه‌های حرفه‌ای.",
-      primaryButton: "مشاهده کانواس",
+      primaryButton: "مشاهده آثار",
       secondaryButton: "تماس",
-      visualEyebrow: "کانواس منتخب",
+      visualEyebrow: "آثار منتخب",
       visualTitle: "آثار منتخب بصری",
       visualDescription:
         "هویت بصری، بنر، تامبنیل، تصاویر هوش مصنوعی و تجربه‌های خلاقانه طراحی.",
@@ -126,11 +126,11 @@ export const dictionary = {
       title: "پروژه‌های بصری منتخب",
       description:
         "گزیده‌ای از هویت‌های بصری، بسته‌بندی‌ها و مطالعات طراحی گرافیک.",
-      link: "مشاهده کانواس",
+      link: "مشاهده آثار",
     },
 
     canvas: {
-      eyebrow: "کانواس",
+      eyebrow: "آثار",
       title: "آرشیو بصری",
       description:
         "آرشیوی منتخب از تجربه‌های بصری، آثار هوش مصنوعی، تامبنیل‌ها، بنرها و مطالعات خلاقانه طراحی.",

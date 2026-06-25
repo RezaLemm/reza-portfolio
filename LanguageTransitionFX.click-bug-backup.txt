@@ -298,14 +298,20 @@ export function LanguageTransitionFX({children}: LanguageTransitionFXProps) {
     window.addEventListener("app:language-change-intent", onIntent)
     window.addEventListener("lemm:language-transition", onIntent)
     window.addEventListener("language-transition", onIntent)
+
+    document.addEventListener("pointerdown", onPointerDown, true)
     document.addEventListener("keydown", onKeyDown, true)
+    document.addEventListener("click", onClick)
     document.addEventListener("keyup", onKeyUp)
 
     return () => {
       window.removeEventListener("app:language-change-intent", onIntent)
       window.removeEventListener("lemm:language-transition", onIntent)
       window.removeEventListener("language-transition", onIntent)
+
+      document.removeEventListener("pointerdown", onPointerDown, true)
       document.removeEventListener("keydown", onKeyDown, true)
+      document.removeEventListener("click", onClick)
       document.removeEventListener("keyup", onKeyUp)
     }
   }, [])

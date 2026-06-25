@@ -1,28 +1,24 @@
 "use client";
 
-import { MotionConfig, useReducedMotion } from "framer-motion";
+import type {ReactNode} from "react";
+import {MotionConfig} from "framer-motion";
+
+type MotionConfigProviderProps = {
+  children: ReactNode;
+};
 
 export default function MotionConfigProvider({
   children,
-}: {
-  children: React.ReactNode;
-}) {
-  const shouldReduceMotion = useReducedMotion();
-
+}: MotionConfigProviderProps) {
   return (
     <MotionConfig
       reducedMotion="user"
-      transition={
-        shouldReduceMotion
-          ? {
-              duration: 0,
-            }
-          : {
-              type: "spring",
-              stiffness: 260,
-              damping: 24,
-            }
-      }
+      transition={{
+        type: "spring",
+        stiffness: 120,
+        damping: 24,
+        mass: 0.9,
+      }}
     >
       {children}
     </MotionConfig>

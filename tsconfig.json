@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -19,8 +23,11 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "baseUrl": "."
   },
   "include": [
     "next-env.d.ts",
@@ -30,5 +37,21 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules",
+    ".next",
+    "out",
+    "dist",
+    "build",
+    "coverage",
+    "_*",
+    "**/_*/**",
+    "_safe-backups/**",
+    "_canvas_build_debug/**",
+    "_exact_original_transition_restore/**",
+    "_restore_exact_transition_package/**",
+    "_send_transition_debug/**",
+    "**/*.bak.ts",
+    "**/*.bak.tsx"
+  ]
 }

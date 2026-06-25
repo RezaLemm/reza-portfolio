@@ -1,162 +1,206 @@
-"use client"
 
-import {useMemo, useState} from "react"
+"use client";
 
-type AnyRecord = Record<string, any>
+import {useMemo, useState, type CSSProperties} from "react";
+import {useLanguage} from "@/components/LanguageProvider";
+
+type AnyRecord = Record<string, any>;
+
+export type WorkCategory = AnyRecord;
+export type WorkProject = AnyRecord;
 
 type SanityWorkClientProps = {
-  projects?: AnyRecord[]
-  categories?: AnyRecord[]
-}
+  projects?: WorkProject[];
+  categories?: WorkCategory[];
+};
 
-function text(value: unknown, fallback = "") {
-  if (typeof value === "string") return value.trim()
-  if (typeof value === "number") return String(value)
-  return fallback
+function text(value: unknown, fallback = ""): string {
+  if (typeof value === "string") return value.trim();
+  if (typeof value === "number" || typeof value === "boolean") return String(value);
+
+  if (value && typeof value === "object") {
+    const objectValue = value as AnyRecord;
+    return (
+      text(objectValue.titleEn) ||
+      text(objectValue.titleFa) ||
+      text(objectValue.title) ||
+      text(objectValue.name) ||
+      text(objectValue.label) ||
+      text(objectValue.current) ||
+      fallback
+    );
+  }
+
+  return fallback;
 }
 
 function slugValue(value: any) {
-  if (!value) return ""
-  if (typeof value === "string") return value.trim()
-  if (typeof value.current === "string") return value.current.trim()
-  return ""
+  if (!value) return "";
+  if (typeof value === "string") return value.trim();
+  if (typeof value.current === "string") return value.current.trim();
+  return text(value);
 }
 
 function normalize(value: unknown) {
-  return text(value).replace(/\s+/g, " ").trim().toLowerCase()
+  return text(value).replace(/\s+/g, " ").trim().toLowerCase();
 }
 
 function toKey(value: unknown) {
   return normalize(value)
     .replace(/&/g, "and")
     .replace(/[^a-z0-9\u0600-\u06ff]+/gi, "-")
-    .replace(/^-|-$/g, "")
+    .replace(/^-|-$/g, "");
 }
 
-function getCategoryLabel(project: AnyRecord) {
-  const category = project?.category || {}
+function getLocalized(enValue: unknown, faValue: unknown, isFa: boolean, fallback = "") {
+  return isFa
+    ? text(faValue) || text(enValue) || fallback
+    : text(enValue) || text(faValue) || fallback;
+}
+
+function getCategoryObject(project: AnyRecord) {
+  const category = project?.category;
+  return category && typeof category === "object" ? category : {};
+}
+
+function getCategoryLabel(project: AnyRecord, isFa: boolean) {
+  const category = getCategoryObject(project);
 
   return (
-    text(category?.titleEn) ||
-    text(category?.titleFa) ||
+    getLocalized(category?.titleEn ?? project?.category, category?.titleFa ?? project?.categoryFa, isFa) ||
     text(project?.type) ||
-    "Creative Study"
-  )
+    (isFa ? "طراحی" : "Design")
+  );
 }
 
 function getCategoryKey(project: AnyRecord) {
-  const category = project?.category || {}
+  const category = getCategoryObject(project);
 
   return (
     slugValue(category?.slug) ||
     toKey(category?.titleEn) ||
     toKey(category?.titleFa) ||
+    toKey(project?.category) ||
+    toKey(project?.categoryFa) ||
     toKey(project?.type) ||
-    "uncategorized"
-  )
+    "design"
+  );
 }
 
 function getProjectSlug(project: AnyRecord) {
   return (
     slugValue(project?.slug) ||
     toKey(project?.titleEn) ||
+    toKey(project?.title) ||
     toKey(project?.titleFa)
-  )
+  );
 }
 
 function getImageUrl(project: AnyRecord) {
   return (
     text(project?.coverImage?.asset?.url) ||
     text(project?.coverImage?.url) ||
+    text(project?.mainImage?.asset?.url) ||
+    text(project?.image?.asset?.url) ||
+    text(project?.thumbnail?.asset?.url) ||
     text(project?.gallery?.[0]?.asset?.url) ||
     text(project?.gallery?.[0]?.url) ||
+    text(project?.imageUrl) ||
     ""
-  )
+  );
 }
 
 function getTools(project: AnyRecord) {
-  if (Array.isArray(project?.tools)) {
-    return project.tools.map((item: unknown) => text(item)).filter(Boolean).slice(0, 4)
-  }
+  const values = Array.isArray(project?.tools)
+    ? project.tools
+    : Array.isArray(project?.deliverables)
+      ? project.deliverables
+      : Array.isArray(project?.tags)
+        ? project.tags
+        : [];
 
-  if (Array.isArray(project?.deliverables)) {
-    return project.deliverables.map((item: unknown) => text(item)).filter(Boolean).slice(0, 4)
-  }
-
-  return ["Photoshop", "Illustrator", "InDesign"]
+  const tools = values.map((item: unknown) => text(item)).filter(Boolean).slice(0, 4);
+  return tools.length > 0 ? tools : ["Photoshop", "Illustrator", "InDesign"];
 }
 
-function buildFilters(projects: AnyRecord[], categories: AnyRecord[]) {
-  const result: {key: string; label: string}[] = [{key: "all", label: "All"}]
-  const seen = new Set(["all"])
+function buildFilters(projects: AnyRecord[], categories: AnyRecord[], isFa: boolean) {
+  const result: {key: string; label: string}[] = [{key: "all", label: isFa ? "همه" : "All"}];
+  const seen = new Set(["all"]);
 
   categories.forEach((category) => {
-    const key =
-      slugValue(category?.slug) ||
-      toKey(category?.titleEn) ||
-      toKey(category?.titleFa)
+    const key = slugValue(category?.slug) || toKey(category?.titleEn) || toKey(category?.titleFa) || toKey(category?.title);
+    const label = getLocalized(category?.titleEn ?? category?.title, category?.titleFa, isFa, key);
 
-    const label =
-      text(category?.titleEn) ||
-      text(category?.titleFa) ||
-      key
+    if (!key || !label || seen.has(key)) return;
 
-    if (!key || !label || seen.has(key)) return
-
-    seen.add(key)
-    result.push({key, label})
-  })
+    seen.add(key);
+    result.push({key, label});
+  });
 
   projects.forEach((project) => {
-    const key = getCategoryKey(project)
-    const label = getCategoryLabel(project)
+    const key = getCategoryKey(project);
+    const label = getCategoryLabel(project, isFa);
 
-    if (!key || !label || seen.has(key)) return
+    if (!key || !label || seen.has(key)) return;
 
-    seen.add(key)
-    result.push({key, label})
-  })
+    seen.add(key);
+    result.push({key, label});
+  });
 
-  return result
+  return result;
 }
 
 export default function SanityWorkClient({
   projects = [],
   categories = [],
 }: SanityWorkClientProps) {
-  const safeProjects = Array.isArray(projects) ? projects : []
-  const safeCategories = Array.isArray(categories) ? categories : []
+  const {lang} = useLanguage();
+  const isFa = lang === "fa";
+  const safeProjects = Array.isArray(projects) ? projects : [];
+  const safeCategories = Array.isArray(categories) ? categories : [];
 
   const filters = useMemo(
-    () => buildFilters(safeProjects, safeCategories),
-    [safeProjects, safeCategories],
-  )
+    () => buildFilters(safeProjects, safeCategories, isFa),
+    [safeProjects, safeCategories, isFa],
+  );
 
-  const [activeFilter, setActiveFilter] = useState("all")
-  const [motionKey, setMotionKey] = useState(0)
+  const [activeFilter, setActiveFilter] = useState("all");
+  const [motionKey, setMotionKey] = useState(0);
 
   const visibleProjects = useMemo(() => {
-    if (activeFilter === "all") return safeProjects
-
-    return safeProjects.filter((project) => getCategoryKey(project) === activeFilter)
-  }, [activeFilter, safeProjects])
+    if (activeFilter === "all") return safeProjects;
+    return safeProjects.filter((project) => getCategoryKey(project) === activeFilter);
+  }, [activeFilter, safeProjects]);
 
   const selectFilter = (key: string) => {
-    if (key === activeFilter) return
+    if (key === activeFilter) return;
+    setActiveFilter(key);
+    setMotionKey((current) => current + 1);
+  };
 
-    setActiveFilter(key)
-    setMotionKey((current) => current + 1)
-  }
+  const copy = isFa
+    ? {
+        eyebrow: "آثار",
+        title: "آرشیو بصری",
+        intro: "آرشیوی منتخب از تجربه‌های بصری، آثار هوش مصنوعی، تامبنیل‌ها، بنرها و مطالعات خلاقانه طراحی.",
+        caseStudy: "مطالعه موردی",
+        empty: "هنوز پروژه‌ای برای این دسته وجود ندارد.",
+      }
+    : {
+        eyebrow: "Works",
+        title: "Visual archive",
+        intro: "A curated archive of visual experiments, AI artworks, thumbnails, banners, and creative studies.",
+        caseStudy: "Case Study",
+        empty: "No projects are available in this category yet.",
+      };
 
   return (
-    <section className="work-page">
+    <section className="work-page" dir={isFa ? "rtl" : "ltr"} lang={isFa ? "fa" : "en"}>
       <div className="work-hero">
-        <p className="work-eyebrow">Canvas</p>
-        <h1>Visual archive</h1>
+        <p className="work-eyebrow">{copy.eyebrow}</p>
+        <h1>{copy.title}</h1>
         <div className="work-title-line" />
-        <p className="work-intro">
-          A curated archive of visual experiments, AI artworks, thumbnails, banners, and creative studies.
-        </p>
+        <p className="work-intro">{copy.intro}</p>
       </div>
 
       <div className="work-filter-cloud" aria-label="Project filters">
@@ -175,26 +219,29 @@ export default function SanityWorkClient({
       {visibleProjects.length > 0 ? (
         <div key={motionKey} className="work-grid">
           {visibleProjects.map((project, index) => {
-            const title = text(project?.titleEn) || text(project?.titleFa) || "Untitled Project"
-            const category = getCategoryLabel(project)
+            const title = getLocalized(project?.titleEn ?? project?.title, project?.titleFa, isFa, "Untitled Project");
+            const category = getCategoryLabel(project, isFa);
             const description =
-              text(project?.shortDescriptionEn) ||
-              text(project?.shortDescriptionFa) ||
-              text(project?.overviewEn) ||
-              text(project?.overviewFa) ||
-              "A refined visual project crafted with a premium design direction."
+              getLocalized(
+                project?.shortDescriptionEn ?? project?.description ?? project?.excerpt ?? project?.overviewEn,
+                project?.shortDescriptionFa ?? project?.descriptionFa ?? project?.excerptFa ?? project?.overviewFa,
+                isFa,
+                isFa
+                  ? "یک پروژه بصری با جهت‌گیری طراحی ممتاز و اجرای دقیق."
+                  : "A refined visual project crafted with a premium design direction.",
+              );
 
-            const imageUrl = getImageUrl(project)
-            const tools = getTools(project)
-            const slug = getProjectSlug(project)
-            const href = slug ? `/work/${slug}` : "/work"
+            const imageUrl = getImageUrl(project);
+            const tools = getTools(project);
+            const slug = getProjectSlug(project);
+            const href = slug ? `/work/${slug}` : "/work";
 
             return (
               <a
                 key={`${project?._id || slug || title}-${motionKey}-${index}`}
                 href={href}
                 className="work-card"
-                style={{"--work-card-index": index} as React.CSSProperties}
+                style={{"--work-card-index": index} as CSSProperties}
               >
                 <div className="work-card-media">
                   {imageUrl ? (
@@ -212,7 +259,7 @@ export default function SanityWorkClient({
                 <div className="work-card-body">
                   <p className="work-card-kicker">{category}</p>
                   <h2>{title}</h2>
-                  <p className="work-card-type">Case Study</p>
+                  <p className="work-card-type">{copy.caseStudy}</p>
                   <p className="work-card-description">{description}</p>
 
                   <div className="work-card-tools">
@@ -222,12 +269,12 @@ export default function SanityWorkClient({
                   </div>
                 </div>
               </a>
-            )
+            );
           })}
         </div>
       ) : (
         <div className="work-empty">
-          <p>No projects are available in this category yet.</p>
+          <p>{copy.empty}</p>
         </div>
       )}
 

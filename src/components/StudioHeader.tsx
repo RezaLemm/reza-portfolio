@@ -20,8 +20,8 @@ const navItems = [
   },
   {
     href: "/work",
-    en: "Canvas",
-    fa: "کانواس",
+    en: "Works",
+    fa: "آثار",
   },
   {
     href: "/about",

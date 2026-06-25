@@ -369,3 +369,755 @@ img {
     -webkit-tap-highlight-color: transparent;
   }
 }
+
+/* WORK_CANVAS_CRITICAL_CSS_START */
+/* This block is copied from SanityWorkClient so /work is styled on the first paint before hydration. */
+.work-cinematic-shell {
+          position: relative;
+          min-height: 100svh;
+          overflow: hidden;
+          background: #030303;
+          color: #f7efe3;
+        }
+
+        .work-cinematic-bg {
+          position: fixed;
+          inset: 0;
+          z-index: 0;
+          pointer-events: none;
+          opacity: 0.95;
+        }
+
+        .work-cinematic-vignette {
+          position: fixed;
+          inset: 0;
+          z-index: 1;
+          pointer-events: none;
+          background:
+            radial-gradient(circle at 50% 12%, transparent 0, rgba(0, 0, 0, 0.18) 38%, rgba(0, 0, 0, 0.78) 100%),
+            linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.72));
+        }
+
+        .work-cinematic-content {
+          position: relative;
+          z-index: 3;
+          min-height: 100svh;
+        }
+
+        .work-page {
+          width: 100%;
+          min-height: 100svh;
+          padding: 138px 24px 110px;
+        }
+
+        .work-hero {
+          width: min(100%, 1080px);
+          margin: 0 auto 32px;
+          text-align: center;
+        }
+
+        .work-eyebrow {
+          margin: 0 0 18px;
+          color: rgba(245, 239, 230, 0.58);
+          font-size: 14px;
+          font-weight: 900;
+          letter-spacing: 0.42em;
+          text-transform: uppercase;
+        }
+
+        .work-hero h1 {
+          margin: 0;
+          color: rgba(255, 250, 241, 0.98);
+          font-size: clamp(76px, 10vw, 146px);
+          font-weight: 950;
+          line-height: 0.82;
+          letter-spacing: -0.09em;
+          text-transform: none;
+        }
+
+        .work-title-line {
+          width: 74px;
+          height: 1px;
+          margin: 30px auto 28px;
+          background: linear-gradient(90deg, transparent, rgba(215, 176, 106, 0.9), transparent);
+        }
+
+        .work-intro {
+          width: min(100%, 760px);
+          margin: 0 auto;
+          color: rgba(245, 239, 230, 0.62);
+          font-size: 15px;
+          font-weight: 650;
+          line-height: 1.8;
+        }
+
+        .work-filter-cloud {
+          width: min(100%, 1040px);
+          min-height: 92px;
+          margin: 0 auto 48px;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          align-content: center;
+          gap: 12px 10px;
+        }
+
+        .work-filter-chip {
+          position: relative;
+          height: 38px;
+          min-height: 38px;
+          padding: 0 18px;
+          border-radius: 999px;
+          border: 1px solid rgba(215, 176, 106, 0.24);
+          background:
+            linear-gradient(180deg, rgba(255, 255, 255, 0.034), rgba(255, 255, 255, 0.012));
+          color: rgba(245, 239, 230, 0.74);
+          font-size: 12px;
+          font-weight: 900;
+          letter-spacing: 0.11em;
+          text-transform: uppercase;
+          cursor: pointer;
+          overflow: hidden;
+          transform: translate3d(0, 0, 0) scale(1);
+          backface-visibility: hidden;
+          box-shadow:
+            inset 0 1px 0 rgba(255, 255, 255, 0.04),
+            0 16px 45px rgba(0, 0, 0, 0.18);
+          transition:
+            transform 220ms cubic-bezier(0.16, 1, 0.3, 1),
+            border-color 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            background 200ms cubic-bezier(0.22, 1, 0.36, 1),
+            color 170ms cubic-bezier(0.22, 1, 0.36, 1),
+            box-shadow 220ms cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .work-filter-chip::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          z-index: -1;
+          opacity: 0;
+          background:
+            radial-gradient(circle at 50% 0%, rgba(255, 236, 198, 0.15), rgba(215, 176, 106, 0.055) 28%, transparent 66%),
+            linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.008));
+          transition: opacity 190ms cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .work-filter-chip:hover {
+          transform: translate3d(0, -1px, 0) scale(1.006);
+          border-color: rgba(215, 176, 106, 0.46);
+          color: #f7e1ac;
+          box-shadow:
+            0 10px 22px rgba(0, 0, 0, 0.2),
+            0 0 16px rgba(215, 176, 106, 0.036),
+            inset 0 1px 0 rgba(255, 255, 255, 0.058);
+        }
+
+        .work-filter-chip:hover::before,
+        .work-filter-chip.is-active::before {
+          opacity: 1;
+        }
+
+        .work-filter-chip.is-active {
+          border-color: rgba(215, 176, 106, 0.52);
+          color: rgba(255, 238, 204, 0.98);
+          background:
+            linear-gradient(180deg, rgba(215, 176, 106, 0.17), rgba(215, 176, 106, 0.048));
+          box-shadow:
+            0 10px 28px rgba(0, 0, 0, 0.22),
+            0 0 22px rgba(215, 176, 106, 0.045),
+            inset 0 1px 0 rgba(255, 255, 255, 0.075);
+        }
+
+        .work-grid {
+          width: min(100%, 1180px);
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 24px;
+          perspective: 1200px;
+        }
+
+        .work-card {
+          --work-card-index: 0;
+          position: relative;
+          min-height: 490px;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          border-radius: 26px;
+          border: 1px solid rgba(215, 176, 106, 0.17);
+          background:
+            linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.014)),
+            rgba(9, 9, 10, 0.62);
+          color: inherit;
+          text-decoration: none;
+          isolation: isolate;
+          opacity: 0;
+          filter: blur(7px);
+          transform: translate3d(0, 26px, 0) scale(0.974);
+          backface-visibility: hidden;
+          animation:
+            workCardEnter 720ms cubic-bezier(0.16, 1, 0.3, 1)
+            calc(var(--work-card-index) * 72ms)
+            both;
+          box-shadow:
+            0 26px 78px rgba(0, 0, 0, 0.42),
+            inset 0 1px 0 rgba(255, 255, 255, 0.052);
+          transition:
+            transform 460ms cubic-bezier(0.16, 1, 0.3, 1),
+            border-color 280ms cubic-bezier(0.22, 1, 0.36, 1),
+            box-shadow 320ms cubic-bezier(0.22, 1, 0.36, 1);
+          will-change: transform, opacity, filter;
+        }
+
+        .work-card::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          z-index: 2;
+          pointer-events: none;
+          opacity: 0;
+          background:
+            radial-gradient(circle at 50% 12%, rgba(255, 236, 198, 0.14), rgba(215, 176, 106, 0.052) 24%, transparent 58%);
+          transition: opacity 260ms cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .work-card:hover {
+          transform: translate3d(0, -7px, 0) scale(1.007);
+          border-color: rgba(215, 176, 106, 0.38);
+          box-shadow:
+            0 34px 88px rgba(0, 0, 0, 0.5),
+            0 0 38px rgba(215, 176, 106, 0.06),
+            0 0 0 1px rgba(215, 176, 106, 0.09),
+            inset 0 1px 0 rgba(255, 255, 255, 0.07);
+        }
+
+        .work-card:hover::before {
+          opacity: 1;
+        }
+
+        .work-card-media {
+          position: relative;
+          height: 270px;
+          overflow: hidden;
+          background:
+            radial-gradient(circle at 50% 0%, rgba(215, 176, 106, 0.14), transparent 62%),
+            rgba(255, 255, 255, 0.035);
+        }
+
+        .work-card-media img,
+        .work-card-placeholder {
+          width: 100%;
+          height: 100%;
+          display: block;
+          object-fit: cover;
+          transform: translate3d(0, 0, 0) scale(1.018);
+          filter: saturate(0.98) brightness(0.78) contrast(1.08);
+          transition: transform 560ms cubic-bezier(0.16, 1, 0.3, 1);
+          will-change: transform;
+        }
+
+        .work-card:hover .work-card-media img,
+        .work-card:hover .work-card-placeholder {
+          transform: translate3d(0, 0, 0) scale(1.05);
+        }
+
+        .work-card-placeholder {
+          background:
+            radial-gradient(circle at 45% 20%, rgba(215, 176, 106, 0.24), transparent 38%),
+            linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+        }
+
+        .work-card-body {
+          position: relative;
+          z-index: 3;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          padding: 22px 22px 24px;
+        }
+
+        .work-card-kicker {
+          margin: 0 0 11px;
+          color: rgba(215, 176, 106, 0.92);
+          font-size: 11px;
+          font-weight: 900;
+          line-height: 1;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+        }
+
+        .work-card h2 {
+          margin: 0;
+          color: rgba(255, 246, 229, 0.96);
+          font-size: clamp(25px, 2vw, 34px);
+          font-weight: 950;
+          line-height: 0.98;
+          letter-spacing: -0.055em;
+        }
+
+        .work-card-type {
+          margin: 10px 0 0;
+          color: rgba(255, 255, 255, 0.5);
+          font-size: 11px;
+          font-weight: 850;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+        }
+
+        .work-card-description {
+          margin: 17px 0 20px;
+          color: rgba(245, 239, 230, 0.68);
+          font-size: 14px;
+          line-height: 1.72;
+        }
+
+        .work-card-tools {
+          margin-top: auto;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+
+        .work-card-tools span {
+          height: 29px;
+          display: inline-flex;
+          align-items: center;
+          border-radius: 999px;
+          padding: 0 10px;
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          background: rgba(255, 255, 255, 0.035);
+          color: rgba(245, 239, 230, 0.66);
+          font-size: 10px;
+          font-weight: 780;
+          letter-spacing: 0.015em;
+        }
+
+        .work-empty {
+          width: min(100%, 960px);
+          margin: 0 auto;
+          min-height: 260px;
+          display: grid;
+          place-items: center;
+          border-radius: 30px;
+          border: 1px solid rgba(215, 176, 106, 0.14);
+          background: rgba(255, 255, 255, 0.028);
+          color: rgba(245, 239, 230, 0.64);
+        }
+
+        .work-page.is-fa {
+          direction: rtl;
+        }
+
+        .work-page.is-fa .work-hero {
+          direction: rtl;
+          text-align: center;
+        }
+
+        .work-page.is-fa .work-eyebrow,
+        .work-page.is-fa .work-filter-chip,
+        .work-page.is-fa .work-card-kicker,
+        .work-page.is-fa .work-card-type {
+          letter-spacing: 0;
+          text-transform: none;
+        }
+
+        .work-page.is-fa .work-card-body {
+          direction: rtl;
+          text-align: right;
+        }
+
+        .work-page.is-fa .work-hero h1 {
+          letter-spacing: -0.055em;
+          line-height: 0.96;
+        }
+
+        .work-page.is-fa .work-intro,
+        .work-page.is-fa .work-card-description {
+          line-height: 2;
+        }
+
+        .work-page.is-fa .work-card-tools {
+          justify-content: flex-end;
+        }
+
+        @keyframes workCardEnter {
+          0% {
+            opacity: 0;
+            filter: blur(7px);
+            transform: translate3d(0, 26px, 0) scale(0.974);
+          }
+
+          56% {
+            opacity: 1;
+            filter: blur(0);
+          }
+
+          100% {
+            opacity: 1;
+            filter: none;
+            transform: translate3d(0, 0, 0) scale(1);
+          }
+        }
+
+        @media (max-width: 1080px) {
+          .work-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            width: min(100%, 820px);
+          }
+        }
+
+        @media (max-width: 720px) {
+          .work-page {
+            padding: 116px 18px 80px;
+          }
+
+          .work-hero h1 {
+            font-size: clamp(58px, 17vw, 86px);
+          }
+
+          .work-filter-cloud {
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            overflow-x: auto;
+            min-height: 56px;
+            padding-bottom: 10px;
+            margin-bottom: 32px;
+          }
+
+          .work-filter-chip {
+            flex: 0 0 auto;
+          }
+
+          .work-grid {
+            grid-template-columns: 1fr;
+            width: min(100%, 370px);
+            gap: 20px;
+          }
+
+          .work-card {
+            min-height: 470px;
+            border-radius: 24px;
+          }
+
+          .work-card-media {
+            height: 248px;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .work-card,
+          .work-card-media img,
+          .work-filter-chip {
+            animation: none !important;
+            transition: none !important;
+          }
+
+          .work-card {
+            opacity: 1 !important;
+            filter: none !important;
+            transform: none !important;
+          }
+        }
+/* WORK_CANVAS_CRITICAL_CSS_END */
+
+
+
+/* WORK_STABLE_CINEMATIC_START */
+.work-cinematic-shell.work-cinema-stable {
+  position: relative;
+  min-height: 100vh;
+  isolation: isolate;
+  overflow: hidden;
+  background: #030303;
+}
+
+.work-cinematic-shell.work-cinema-stable,
+.work-cinematic-shell.work-cinema-stable * {
+  backface-visibility: hidden;
+}
+
+.work-stable-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% -8%, rgba(215, 176, 106, 0.13), transparent 42%),
+    radial-gradient(circle at 15% 18%, rgba(255, 255, 255, 0.045), transparent 30%),
+    radial-gradient(circle at 86% 22%, rgba(215, 176, 106, 0.075), transparent 34%),
+    linear-gradient(180deg, #050403 0%, #0a0705 46%, #020202 100%);
+}
+
+.work-stable-bg > * {
+  pointer-events: none;
+}
+
+.work-stable-aurora {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(48px);
+  opacity: 0.34;
+  mix-blend-mode: screen;
+  transform: translate3d(0, 0, 0);
+}
+
+.work-stable-aurora-one {
+  width: 58vw;
+  height: 58vw;
+  min-width: 560px;
+  min-height: 560px;
+  top: -26%;
+  right: -16%;
+  background:
+    radial-gradient(circle at 42% 42%, rgba(215, 176, 106, 0.23), transparent 54%),
+    radial-gradient(circle at 62% 70%, rgba(255, 244, 210, 0.08), transparent 58%);
+  animation: workStableAuroraOne 16s ease-in-out infinite alternate;
+}
+
+.work-stable-aurora-two {
+  width: 68vw;
+  height: 68vw;
+  min-width: 640px;
+  min-height: 640px;
+  bottom: -36%;
+  left: -24%;
+  background:
+    radial-gradient(circle at 52% 42%, rgba(255, 255, 255, 0.055), transparent 54%),
+    radial-gradient(circle at 46% 66%, rgba(215, 176, 106, 0.14), transparent 60%);
+  animation: workStableAuroraTwo 20s ease-in-out infinite alternate;
+}
+
+.work-stable-grid {
+  position: absolute;
+  inset: -18%;
+  opacity: 0.12;
+  background-image:
+    linear-gradient(rgba(215, 176, 106, 0.075) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(215, 176, 106, 0.075) 1px, transparent 1px);
+  background-size: 92px 92px;
+  mask-image: radial-gradient(circle at 50% 30%, black, transparent 68%);
+  transform: perspective(950px) rotateX(62deg) translateY(-8%);
+  animation: workStableGridDrift 34s linear infinite;
+}
+
+.work-stable-gold-sweep {
+  position: absolute;
+  inset: -42% -26%;
+  opacity: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    transparent 43%,
+    rgba(255, 229, 174, 0.2) 50%,
+    transparent 57%,
+    transparent 100%
+  );
+  transform: translateX(-48%) rotate(7deg);
+  mix-blend-mode: screen;
+  animation: workStableGoldSweep 12s ease-in-out infinite;
+}
+
+.work-stable-soft-grain {
+  position: absolute;
+  inset: -20%;
+  opacity: 0.045;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.22) 0 1px, transparent 1.4px),
+    radial-gradient(circle at 72% 58%, rgba(255,255,255,0.14) 0 1px, transparent 1.4px);
+  background-size: 28px 28px, 34px 34px;
+  mix-blend-mode: overlay;
+}
+
+.work-stable-vignette {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 26%, transparent 0 24%, rgba(0, 0, 0, 0.2) 58%, rgba(0, 0, 0, 0.68) 100%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.36));
+}
+
+.work-cinematic-shell.work-cinema-stable .work-cinematic-content {
+  position: relative;
+  z-index: 3;
+  transform: none !important;
+}
+
+.work-cinematic-shell.work-cinema-stable .work-page {
+  position: relative;
+  z-index: 4;
+}
+
+.work-cinematic-shell.work-cinema-stable .work-hero {
+  animation: workStableHeroIn 950ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.work-cinematic-shell.work-cinema-stable .work-filter-cloud {
+  animation: workStableFilterIn 900ms 120ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.work-cinematic-shell.work-cinema-stable .work-grid {
+  animation: workStableGridIn 1000ms 180ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.work-cinematic-shell.work-cinema-stable .work-card {
+  transform-style: flat !important;
+  transition:
+    transform 260ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 260ms ease,
+    box-shadow 260ms ease,
+    filter 260ms ease !important;
+  will-change: auto !important;
+}
+
+.work-cinematic-shell.work-cinema-stable .work-card:hover {
+  transform: translate3d(0, -6px, 0) !important;
+  border-color: rgba(215, 176, 106, 0.36);
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.42),
+    0 0 46px rgba(215, 176, 106, 0.075);
+  filter: saturate(1.05) contrast(1.025);
+}
+
+.work-cinematic-shell.work-cinema-stable .work-card::before,
+.work-cinematic-shell.work-cinema-stable .work-card::after {
+  animation: none !important;
+}
+
+.work-cinematic-shell.work-cinema-stable .work-card-media,
+.work-cinematic-shell.work-cinema-stable .work-card-body {
+  transform: none !important;
+}
+
+.work-cinema-letterbox,
+.work-cinema-lens,
+.work-cinema-chromatic,
+.work-cinema-vignette,
+.work-cinema-deep-space,
+.work-cinema-orbit,
+.work-cinema-spotlight,
+.work-cinema-volumetric,
+.work-cinema-grid,
+.work-cinema-gold-rift,
+.work-cinema-stars,
+.work-cinema-grain {
+  display: none !important;
+}
+
+@keyframes workStableAuroraOne {
+  0% {
+    opacity: 0.24;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  100% {
+    opacity: 0.38;
+    transform: translate3d(-4%, 5%, 0) scale(1.06);
+  }
+}
+
+@keyframes workStableAuroraTwo {
+  0% {
+    opacity: 0.18;
+    transform: translate3d(0, 0, 0) scale(1.04);
+  }
+
+  100% {
+    opacity: 0.32;
+    transform: translate3d(5%, -4%, 0) scale(1);
+  }
+}
+
+@keyframes workStableGridDrift {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+
+  100% {
+    background-position: -92px 92px, -92px 92px;
+  }
+}
+
+@keyframes workStableGoldSweep {
+  0%,
+  18% {
+    opacity: 0;
+    transform: translateX(-48%) rotate(7deg);
+  }
+
+  44% {
+    opacity: 0.2;
+  }
+
+  76%,
+  100% {
+    opacity: 0;
+    transform: translateX(48%) rotate(7deg);
+  }
+}
+
+@keyframes workStableHeroIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+    filter: blur(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0);
+  }
+}
+
+@keyframes workStableFilterIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0);
+    filter: blur(8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0);
+  }
+}
+
+@keyframes workStableGridIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 22px, 0);
+    filter: blur(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work-stable-aurora,
+  .work-stable-grid,
+  .work-stable-gold-sweep,
+  .work-cinematic-shell.work-cinema-stable .work-hero,
+  .work-cinematic-shell.work-cinema-stable .work-filter-cloud,
+  .work-cinematic-shell.work-cinema-stable .work-grid,
+  .work-cinematic-shell.work-cinema-stable .work-card {
+    animation: none !important;
+    transition-duration: 1ms !important;
+  }
+
+  .work-cinematic-shell.work-cinema-stable .work-card:hover {
+    transform: none !important;
+  }
+}
+/* WORK_STABLE_CINEMATIC_END */
