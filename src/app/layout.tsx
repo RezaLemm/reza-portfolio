@@ -1,3 +1,4 @@
+import LanguageTransitionFX from "@/components/LanguageTransitionFX"
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -107,7 +108,7 @@ export default function RootLayout({
 
             <div className="relative z-10">
               <Navbar />
-              {children}
+              <LanguageTransitionFX>{children}</LanguageTransitionFX>
             </div>
           </MotionConfigProvider>
         </LanguageProvider>

@@ -81,7 +81,7 @@ function getCurrentLang(): TargetLang {
       if (hasEnSignal(value)) return "en"
     }
   } catch {
-    // localStorage may be unavailable in some runtimes
+    // ignore
   }
 
   const htmlLang = document.documentElement.getAttribute("lang")
@@ -114,6 +114,7 @@ function detectLanguageTarget(target: EventTarget | null): TargetLang | null {
     const text = normalize(value)
 
     if (text === "en" || text === "eng" || text === "english") return "en"
+
     if (
       text === "fa" ||
       text === "\u0641\u0627\u0631\u0633\u06cc" ||
@@ -226,7 +227,7 @@ export function LanguageTransitionFX({children}: LanguageTransitionFXProps) {
 
     hideTimerRef.current = setTimeout(() => {
       setIsPlaying(false)
-    }, 1480)
+    }, 1860)
   }
 
   useEffect(() => {
@@ -323,82 +324,82 @@ export function LanguageTransitionFX({children}: LanguageTransitionFXProps) {
         {isPlaying && (
           <motion.div
             aria-hidden="true"
-            className="pointer-events-none fixed inset-0 z-[9999] overflow-hidden bg-black/8"
+            className="pointer-events-none fixed inset-0 z-[9999] overflow-hidden bg-black/10"
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             exit={{opacity: 0}}
-            transition={{duration: 0.26, ease: easeSoft}}
+            transition={{duration: 0.34, ease: easeSoft}}
           >
             <motion.div
-              className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,224,162,0.34),transparent_42%)]"
-              initial={{scale: 0.86, opacity: 0}}
+              className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,224,162,0.16),transparent_38%)]"
+              initial={{scale: 0.82, opacity: 0}}
               animate={{scale: 1.08, opacity: 1}}
-              exit={{scale: 1.2, opacity: 0}}
+              exit={{scale: 1.18, opacity: 0}}
               transition={{duration: 1.04, ease: easePremium}}
             />
 
             <motion.div
-              className="absolute left-0 top-0 h-full w-1/2 bg-[linear-gradient(90deg,rgba(215,176,106,0.08),rgba(215,176,106,0.13),transparent)]"
-              initial={{x: "-105%", opacity: 0}}
-              animate={{x: "0%", opacity: 0.38}}
-              exit={{x: "-105%", opacity: 0}}
-              transition={{duration: 0.72, ease: easePremium}}
+              className="absolute left-0 top-0 h-full w-1/2 bg-[linear-gradient(90deg,rgba(215,176,106,0.045),rgba(215,176,106,0.1),transparent)]"
+              initial={{x: "-106%", opacity: 0}}
+              animate={{x: "0%", opacity: 0.42}}
+              exit={{x: "-118%", opacity: 0}}
+              transition={{duration: 0.92, ease: easePremium}}
             />
 
             <motion.div
-              className="absolute right-0 top-0 h-full w-1/2 bg-[linear-gradient(270deg,rgba(215,176,106,0.08),rgba(215,176,106,0.13),transparent)]"
-              initial={{x: "105%", opacity: 0}}
-              animate={{x: "0%", opacity: 0.38}}
-              exit={{x: "105%", opacity: 0}}
-              transition={{duration: 0.72, ease: easePremium}}
+              className="absolute right-0 top-0 h-full w-1/2 bg-[linear-gradient(270deg,rgba(215,176,106,0.045),rgba(215,176,106,0.1),transparent)]"
+              initial={{x: "106%", opacity: 0}}
+              animate={{x: "0%", opacity: 0.42}}
+              exit={{x: "118%", opacity: 0}}
+              transition={{duration: 0.92, ease: easePremium}}
             />
 
             <motion.div
-              className="absolute top-0 h-full w-[165vw] bg-[linear-gradient(90deg,transparent_0%,rgba(215,176,106,0.24)_38%,rgba(255,244,219,0.34)_50%,rgba(215,176,106,0.24)_62%,transparent_100%)] blur-2xl"
+              className="absolute top-0 h-full w-[165vw] bg-[linear-gradient(90deg,transparent_0%,rgba(215,176,106,0.18)_38%,rgba(255,244,219,0.3)_50%,rgba(215,176,106,0.18)_62%,transparent_100%)] blur-xl"
+              initial={{x: sweepInitial, opacity: 0}}
+              animate={{x: sweepAnimate, opacity: 0.9}}
+              exit={{opacity: 0}}
+              transition={{duration: 1.32, ease: easePremium}}
+            />
+
+            <motion.div
+              className="absolute top-1/2 h-px w-[165vw] -translate-y-1/2 bg-[linear-gradient(90deg,transparent_0%,rgba(215,176,106,0.1)_30%,rgba(255,244,219,0.86)_50%,rgba(215,176,106,0.1)_70%,transparent_100%)]"
               initial={{x: sweepInitial, opacity: 0}}
               animate={{x: sweepAnimate, opacity: 1}}
               exit={{opacity: 0}}
-              transition={{duration: 1.12, ease: easePremium}}
+              transition={{duration: 1.32, ease: easePremium}}
             />
 
             <motion.div
-              className="absolute top-1/2 h-px w-[165vw] -translate-y-1/2 bg-[linear-gradient(90deg,transparent_0%,rgba(215,176,106,0.12)_30%,rgba(255,244,219,0.88)_50%,rgba(215,176,106,0.12)_70%,transparent_100%)]"
-              initial={{x: sweepInitial, opacity: 0}}
-              animate={{x: sweepAnimate, opacity: 1}}
-              exit={{opacity: 0}}
-              transition={{duration: 1.12, ease: easePremium}}
-            />
-
-            <motion.div
-              className="absolute left-1/2 top-1/2 h-[30rem] w-[30rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#d7b06a]/22"
+              className="absolute left-1/2 top-1/2 h-[30rem] w-[30rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#d7b06a]/22 will-change-transform"
               initial={{scale: 0.58, opacity: 0, rotate: -16}}
               animate={{scale: 1.12, opacity: 1, rotate: 0}}
-              exit={{scale: 1.32, opacity: 0, rotate: 12}}
-              transition={{duration: 1.18, ease: easePremium}}
-            />
-
-            <motion.div
-              className="absolute left-1/2 top-1/2 h-[18rem] w-[18rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10"
-              initial={{scale: 0.5, opacity: 0, rotate: 18}}
-              animate={{scale: 1, opacity: 1, rotate: 0}}
-              exit={{scale: 1.24, opacity: 0, rotate: -14}}
+              exit={{scale: 1.3, opacity: 0, rotate: 12}}
               transition={{duration: 1.02, ease: easePremium}}
             />
 
             <motion.div
-              className="absolute left-1/2 top-1/2 h-[42rem] w-[42rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(215,176,106,0.13),transparent_60%)] blur-2xl"
-              initial={{scale: 0.72, opacity: 0}}
-              animate={{scale: 1, opacity: 1}}
-              exit={{scale: 1.18, opacity: 0}}
-              transition={{duration: 1.18, ease: easePremium}}
+              className="absolute left-1/2 top-1/2 h-[18rem] w-[18rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10 will-change-transform"
+              initial={{scale: 0.5, opacity: 0, rotate: 18}}
+              animate={{scale: 1, opacity: 1, rotate: 0}}
+              exit={{scale: 1.22, opacity: 0, rotate: -14}}
+              transition={{duration: 1, ease: easePremium}}
             />
 
             <motion.div
-              className="absolute left-1/2 top-1/2 flex w-screen -translate-x-1/2 -translate-y-1/2 flex-col will-change-transform items-center justify-center px-6 text-center"
+              className="absolute left-1/2 top-1/2 h-[42rem] w-[42rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(215,176,106,0.055),transparent_56%)] blur-2xl"
+              initial={{scale: 0.72, opacity: 0}}
+              animate={{scale: 1, opacity: 1}}
+              exit={{scale: 1.16, opacity: 0}}
+              transition={{duration: 1.12, ease: easePremium}}
+            />
+
+            <motion.div
+              className="absolute left-1/2 top-1/2 flex w-screen -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center px-6 text-center will-change-transform"
               initial={{opacity: 0, y: 28, scale: 0.94}}
               animate={{opacity: 1, y: 0, scale: 1}}
               exit={{opacity: 0, y: -24, scale: 1.025}}
-              transition={{duration: 1.05, ease: easePremium}}
+              transition={{duration: 0.92, ease: easePremium}}
             >
               <span className="mb-4 rounded-full border border-[#d7b06a]/24 bg-white/[0.05] px-5 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.42em] text-[#f4d7a0]/80">
                 {subtitle}
@@ -407,7 +408,7 @@ export function LanguageTransitionFX({children}: LanguageTransitionFXProps) {
               <span
                 dir={isFa ? "rtl" : "ltr"}
                 lang={targetLang}
-                className="relative block w-full whitespace-nowrap text-center text-[clamp(4.8rem,12vw,12rem)] font-black leading-none text-white"
+                className="relative block w-full whitespace-nowrap text-center text-[clamp(4.6rem,11.4vw,11.4rem)] font-black leading-none text-white"
                 style={{
                   transform: titleVisualY,
                   letterSpacing: isFa ? "-0.045em" : "-0.09em",

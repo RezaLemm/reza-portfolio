@@ -1,0 +1,211 @@
+﻿
+
+Score              : 800
+Length             : 164967
+NormalizeLangCount : 1
+GetLangCount       : 1
+Modified           : 6/24/2026 8:20:07 PM
+File               : F:\2TB\Files\Web\reza-portfolio\_recovery-before-git-restore-20260624-202802\hom
+                     e-folder-broken\PremiumHomePage.tsx
+
+Score              : 800
+Length             : 164967
+NormalizeLangCount : 1
+GetLangCount       : 1
+Modified           : 6/24/2026 8:20:07 PM
+File               : F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx
+
+Score              : 800
+Length             : 97558
+NormalizeLangCount : 1
+GetLangCount       : 1
+Modified           : 6/24/2026 8:19:51 PM
+File               : F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx.backup-b
+                     efore-restore-content
+
+Score              : 800
+Length             : 37374
+NormalizeLangCount : 1
+GetLangCount       : 1
+Modified           : 6/24/2026 7:43:05 PM
+File               : F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx.backup-b
+                     efore-lang-transition-safe-fix
+
+Score              : 800
+Length             : 37374
+NormalizeLangCount : 1
+GetLangCount       : 1
+Modified           : 6/24/2026 7:43:05 PM
+File               : F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx.backup-b
+                     efore-final-safe-fix
+
+Score              : 800
+Length             : 29962
+NormalizeLangCount : 0
+GetLangCount       : 1
+Modified           : 6/24/2026 7:28:51 PM
+File               : F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx.backup-b
+                     efore-language-restore
+
+Score              : 800
+Length             : 37336
+NormalizeLangCount : 0
+GetLangCount       : 1
+Modified           : 6/24/2026 6:38:58 PM
+File               : F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx.backup-b
+                     efore-stable-bg-cleanup
+
+Score              : 760
+Length             : 25513
+NormalizeLangCount : 0
+GetLangCount       : 1
+Modified           : 6/24/2026 7:16:02 PM
+File               : F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx.backup-b
+                     efore-stable-language-organic-bg
+
+Score              : 760
+Length             : 25513
+NormalizeLangCount : 0
+GetLangCount       : 1
+Modified           : 6/24/2026 7:09:02 PM
+File               : F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx.backup-b
+                     efore-orbital-bg
+
+Score              : 760
+Length             : 25513
+NormalizeLangCount : 0
+GetLangCount       : 1
+Modified           : 6/24/2026 7:04:34 PM
+File               : F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx.backup-b
+                     efore-final-luxury-bg
+
+Score              : 760
+Length             : 25513
+NormalizeLangCount : 0
+GetLangCount       : 1
+Modified           : 6/24/2026 6:57:36 PM
+File               : F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx.backup-b
+                     efore-luxury-volumetric-stage
+
+Score              : 760
+Length             : 25513
+NormalizeLangCount : 0
+GetLangCount       : 1
+Modified           : 6/24/2026 6:50:41 PM
+File               : F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx.backup-b
+                     efore-volumetric-bg
+
+Score              : 760
+Length             : 25513
+NormalizeLangCount : 0
+GetLangCount       : 1
+Modified           : 6/24/2026 6:43:53 PM
+File               : F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx.backup-b
+                     efore-hydration-safe-rich-bg
+
+Score              : 760
+Length             : 37248
+NormalizeLangCount : 0
+GetLangCount       : 1
+Modified           : 6/24/2026 6:30:51 PM
+File               : F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx.backup-b
+                     efore-separated-cinematic-bg
+
+Score              : 760
+Length             : 37208
+NormalizeLangCount : 0
+GetLangCount       : 1
+Modified           : 6/24/2026 6:28:41 PM
+File               : F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx.backup-b
+                     efore-dustref-fix
+
+Score              : 760
+Length             : 34346
+NormalizeLangCount : 0
+GetLangCount       : 1
+Modified           : 6/24/2026 6:22:45 PM
+File               : F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx.backup-b
+                     efore-gold-dust-engine
+
+Score              : 760
+Length             : 32868
+NormalizeLangCount : 0
+GetLangCount       : 1
+Modified           : 6/24/2026 6:13:32 PM
+File               : F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx.backup-b
+                     efore-best-bg-mouse-light
+
+Score              : 760
+Length             : 31647
+NormalizeLangCount : 0
+GetLangCount       : 1
+Modified           : 6/24/2026 6:06:31 PM
+File               : F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx.backup-b
+                     efore-exact-mouse-light
+
+Score              : 760
+Length             : 29178
+NormalizeLangCount : 0
+GetLangCount       : 1
+Modified           : 6/24/2026 6:01:19 PM
+File               : F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx.backup-b
+                     efore-cinematic-bg
+
+Score              : 720
+Length             : 26623
+NormalizeLangCount : 0
+GetLangCount       : 1
+Modified           : 6/24/2026 5:53:30 PM
+File               : F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx.backup-b
+                     efore-next-level-same-style
+
+Score              : 680
+Length             : 29199
+NormalizeLangCount : 0
+GetLangCount       : 1
+Modified           : 6/24/2026 5:23:28 PM
+File               : F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx.backup-b
+                     efore-reference-style
+
+Score              : 640
+Length             : 23514
+NormalizeLangCount : 0
+GetLangCount       : 1
+Modified           : 6/24/2026 4:47:36 PM
+File               : F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx.backup-b
+                     efore-cinematic-masterpiece
+
+Score              : 590
+Length             : 21190
+NormalizeLangCount : 0
+GetLangCount       : 1
+Modified           : 6/24/2026 5:40:06 PM
+File               : F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx.backup-b
+                     efore-same-but-better
+
+Score              : 510
+Length             : 15079
+NormalizeLangCount : 0
+GetLangCount       : 1
+Modified           : 6/24/2026 4:41:37 PM
+File               : F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx.backup-b
+                     efore-ultra-premium
+
+Score              : 420
+Length             : 18301
+NormalizeLangCount : 0
+GetLangCount       : 1
+Modified           : 6/24/2026 5:34:24 PM
+File               : F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx.backup-r
+                     estore-better-previous
+
+Score              : -200
+Length             : 48876
+NormalizeLangCount : 2
+GetLangCount       : 2
+Modified           : 6/24/2026 7:53:29 PM
+File               : F:\2TB\Files\Web\reza-portfolio\src\components\home\PremiumHomePage.tsx.backup-b
+                     efore-duplicate-lang-clean
+
+
+
