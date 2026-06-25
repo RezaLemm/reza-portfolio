@@ -70,13 +70,13 @@ export default function CanvasCinematicUpgrade() {
     }
 
     if (!shouldReduceMotion) {
-      window.addEventListener("pointermove", onPointerMove, {passive: true})
+      window.addEventListener("pointermove", onPointerMove as EventListener, {passive: true})
       raf = window.requestAnimationFrame(render)
     }
 
     return () => {
       window.cancelAnimationFrame(raf)
-      window.removeEventListener("pointermove", onPointerMove)
+      window.removeEventListener("pointermove", onPointerMove as EventListener)
     }
   }, [])
 
@@ -197,13 +197,13 @@ export default function CanvasCinematicUpgrade() {
       subtree: true,
     })
 
-    root.addEventListener("pointermove", onMove, {passive: true})
-    root.addEventListener("pointerleave", onLeave)
+    root.addEventListener("pointermove", onMove as EventListener, {passive: true})
+    root.addEventListener("pointerleave", onLeave as EventListener)
 
     return () => {
       observer.disconnect()
-      root.removeEventListener("pointermove", onMove)
-      root.removeEventListener("pointerleave", onLeave)
+      root.removeEventListener("pointermove", onMove as EventListener)
+      root.removeEventListener("pointerleave", onLeave as EventListener)
     }
   }, [])
 

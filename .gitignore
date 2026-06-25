@@ -31,3 +31,8 @@ Thumbs.db
 work-motion-conflict-report.txt
 
 .vercel/
+# local design/archive files
+Photos/
+_latest-home-recovery-*/
+_recovery-before-git-restore-*/
+# local backups
